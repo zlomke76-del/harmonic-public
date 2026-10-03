@@ -1,0 +1,49 @@
+{
+  "examination": "V114_EXECUTION_BOUNDARY_FALSIFICATION",
+  "date": "2026-10-01",
+  "result": "SUPPORTED_FOR_EXAMINED_BOUNDARY",
+  "frozen_property": "Within the constituted executor boundary, consequence requires a current valid Harmonic execution permit bound to the exact payload.",
+  "falsifier": "Any bypass, forgery, tamper, stale permit, governance refusal, or missing governance evidence produces the governed consequence.",
+  "falsifier_triggered": false,
+  "final_effect_count": 1,
+  "expected_effect_count": 1,
+  "cases": [
+    {
+      "name": "receiptless_direct_bypass",
+      "passed": true,
+      "detail": "blocked; no consequence"
+    },
+    {
+      "name": "forged_permit",
+      "passed": true,
+      "detail": "blocked; no consequence"
+    },
+    {
+      "name": "valid_current_permit_positive_control",
+      "passed": true,
+      "detail": "exactly one consequence"
+    },
+    {
+      "name": "payload_tamper_after_permit",
+      "passed": true,
+      "detail": "blocked; no consequence"
+    },
+    {
+      "name": "expired_permit",
+      "passed": true,
+      "detail": "blocked; no consequence"
+    },
+    {
+      "name": "governance_refusal",
+      "passed": true,
+      "detail": "no receipt; no consequence"
+    },
+    {
+      "name": "missing_governance_evidence",
+      "passed": true,
+      "detail": "failed closed; no consequence"
+    }
+  ],
+  "nonclaim": "This test does not establish exhaustive deployment-wide path coverage. That requires architecture-specific enumeration and adversarial testing of every effect-capable route.",
+  "verification_note": "Result reproduced from the repository's frozen V114 test command npm run test:v114-execution-boundary on 2026-10-01. This is repository-local verification, not independent third-party attestation."
+}
