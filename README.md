@@ -86,3 +86,25 @@ The lineage is append-only in meaning:
 ## Artifact availability
 
 This repository snapshot records the adjudicative findings and the known BS-003 artifact identities above. It does **not** manufacture or reconstruct missing frozen BS-004/BS-005 raw execution bundles. If those exact preserved artifacts are published later, they should be added as immutable evidence objects with their original digests and linked from this record without changing the findings above.
+
+## Runnable raw versus governed execution
+
+Watch an NDA change between proposal and execution. The demo records one raw
+unjustified HTTP disclosure, zero governed disclosures after revocation, and a
+successful unchanged-authority control.
+
+```bash
+npm run example:raw-vs-governed
+```
+
+See [the example and optional live model mode](./examples/raw-vs-governed/README.md).
+This is a synthetic public-reference integration demo, separate from frozen evidence.
+
+## Public runtime and evidence boundary
+
+This repository does not contain the sovereign production Harmonic runtime.
+The runnable example uses only the public reference evaluator. The preserved
+T4 v1.1 reading remains **D3 — provenance dependency not demonstrated**;
+provenance-projection insensitivity was observed. See the
+[T4 evidence record](./evidence/decision-engineering/t4-v1.1/README.md).
+The new example does not revise that finding.

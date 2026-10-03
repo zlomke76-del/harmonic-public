@@ -7,7 +7,9 @@
     "test:vectors": "node scripts/test-vectors.js",
     "check": "node --check api/evaluate.js && node --check api/health.js && node --check api/contact.js && node --check scripts/verify-public-boundary.js",
     "verify:evidence": "python3 evidence/decision-engineering/t4-v1.1/verify_evidence.py",
-    "verify:public-boundary": "node scripts/verify-public-boundary.js"
+    "verify:public-boundary": "node scripts/verify-public-boundary.js",
+    "example:raw-vs-governed": "node examples/raw-vs-governed/run.js",
+    "test:examples": "node --test examples/raw-vs-governed/guard.test.js"
   },
   "dependencies": {}
 }

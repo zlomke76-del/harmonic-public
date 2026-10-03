@@ -118,3 +118,16 @@ npm run verify:public-boundary
 - Inspect the [Node example](./examples/node-evaluate.js).
 - Inspect the [Python example](./examples/python_evaluate.py).
 - Review the [frozen public evidence](./evidence/decision-engineering/t4-v1.1/).
+
+## Runnable raw versus governed execution
+
+Watch an NDA change between proposal and execution. The demo records one raw
+unjustified HTTP disclosure, zero governed disclosures after revocation, and a
+successful unchanged-authority control.
+
+```bash
+npm run example:raw-vs-governed
+```
+
+See [the example and optional live model mode](./examples/raw-vs-governed/README.md).
+This is a synthetic public-reference integration demo, separate from frozen evidence.
