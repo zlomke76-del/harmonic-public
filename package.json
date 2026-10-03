@@ -9,7 +9,8 @@
     "verify:evidence": "python3 evidence/decision-engineering/t4-v1.1/verify_evidence.py",
     "verify:public-boundary": "node scripts/verify-public-boundary.js",
     "example:raw-vs-governed": "node examples/raw-vs-governed/run.js",
-    "test:examples": "node --test examples/raw-vs-governed/guard.test.js"
+    "test:examples": "node --test examples/raw-vs-governed/guard.test.js",
+    "verify:successor-evidence": "node scripts/verify-successor-evidence.js"
   },
   "dependencies": {}
 }
