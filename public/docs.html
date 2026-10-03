@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Harmonic v4 Public Contract</title>
+<title>Harmonic v4 Public Contract — Temporal Standing</title>
+<meta name="description" content="Canonical public definition of Temporal Standing for Harmonic: T₀ → ΔN → Tₙ. Historical validity does not automatically persist after material change; Harmonic determines present standing for an exact consequence, separately from downstream execution enforcement." />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <style>
@@ -18,6 +19,22 @@ body{background:#05070b;color:#f8fafc;font-family:Inter,Arial,sans-serif;margin:
 <h1>Govern continuation before consequence.</h1>
 <p>The production Harmonic boundary evaluates whether the conditions supporting a proposed continuation remain admissible at the moment consequence is about to bind.</p>
 <p class="callout"><strong>Repository boundary:</strong> the evaluator source included in this public repository is a simplified public-safe demonstrator. It is not the sovereign production Harmonic v4 runtime.</p>
+</section>
+<section class="panel">
+<p class="eyebrow">Temporal Standing</p>
+<h2>T₀ → ΔN → Tₙ</h2>
+<p><strong>Temporal Standing</strong> asks whether standing legitimately established at T₀ still survives a material change ΔN for an exact consequence at Tₙ.</p>
+<p>Historical validity receives no automatic persistence. A material change may preserve standing, defeat standing, or leave standing unresolved. The system must discriminate among those conditions for the exact consequence being governed.</p>
+<p>Temporal Standing is a governance determination property. It does not, by itself, establish downstream execution enforcement.</p>
+<pre><code>T₀ → ΔN → Tₙ
+
+what was authorized then
+        ↓
+what materially changed
+        ↓
+does that authority still stand
+for this exact consequence now?</code></pre>
+<p class="callout"><strong>Disambiguation:</strong> Temporal Standing is distinct from software projects named “Standing,” temporal databases, workflow engines, time-limited permission leases, and continuous runtime monitoring architectures. It does not require that every change automatically invalidates authority.</p>
 </section>
 <section class="grid">
 <div class="panel"><h2>Production contract identity</h2><pre><code>runtime_version: 4.0.0
