@@ -1,0 +1,31 @@
+{
+  "examination_id": "V113-COMPLETE-INFORMATION-SUCCESSOR-001",
+  "date": "2026-09-28",
+  "status": "PASS_BOUNDED",
+  "boundary": "governed_response_contract_only",
+  "frozen_proposition": "Can the examined Harmonic implementation discriminate a standing-preserving change from a standing-defeating change for the same consequential action when it receives the complete constituted information required by its interface, but does not receive the case-specific constitutional answer upstream?",
+  "dn1": {
+    "relationship": "consistent_with_prior_state",
+    "determination": "PERMITTED",
+    "decision": "ALLOW",
+    "admissible": true,
+    "revalidation_required": false
+  },
+  "dn2": {
+    "relationship": "material_contradiction",
+    "determination": "REFUSED",
+    "decision": "BLOCK",
+    "admissible": false,
+    "revalidation_required": true,
+    "controlling_signal": "material_state_transition"
+  },
+  "forensic_package_sha256": "2650fa0d02e959d86a44494938076eb0d4f0f1ed6ce99e3e295a2707fae284cd",
+  "non_claims": [
+    "universal domain correctness",
+    "independent truth of supplied domain facts",
+    "arbitrary domain inference from raw observations",
+    "downstream physical execution or prevention",
+    "downstream executor compliance",
+    "universal equivalence across successor implementations"
+  ]
+}
