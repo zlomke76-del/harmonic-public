@@ -109,15 +109,17 @@ provenance-projection insensitivity was observed. See the
 [T4 evidence record](./evidence/decision-engineering/t4-v1.1/README.md).
 The new example does not revise that finding.
 
-## V113 and V114 preserved evidence
+## V113, V114, and V116 preserved evidence
 
 | Examination | Preserved result | Examined boundary |
 |---|---|---|
 | [V113](evidence/examinations/v113-complete-information-successor/README.md) | PASS_BOUNDED: ΔN1 PERMITTED / ALLOW; ΔN2 REFUSED / BLOCK | Governed response |
 | [V114](evidence/examinations/v114-execution-boundary/README.md) | SUPPORTED_FOR_EXAMINED_BOUNDARY: one positive effect, six unauthorized paths blocked | Constituted synthetic executor |
+| [V116](evidence/examinations/v116-pack-boundary-invariance/README.md) | PASS — BOUNDED: invariant Pack representation; C2 inactive PERMITTED, C2 active REFUSED; independently accepted as run | Pack constitution / downstream constitutional significance |
 
-Open the [V113 page](v113-complete-information-successor.html) or
-[V114 page](v114-execution-boundary.html). Public artifact checksums are separate
+Open the [V113 page](v113-complete-information-successor.html),
+[V114 page](v114-execution-boundary.html), or
+[V116 page](v116-pack-boundary-invariance.html). Public artifact checksums are separate
 from V113's original private forensic manifest. Private runtime/source ZIPs are
 excluded. The frozen V114 test is inspectable evidence, not runnable against the
 public reference evaluator. These additions preserve prior lineage unchanged.
