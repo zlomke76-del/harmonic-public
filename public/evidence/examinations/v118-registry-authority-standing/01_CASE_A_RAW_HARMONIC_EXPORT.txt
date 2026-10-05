@@ -1,0 +1,1800 @@
+{
+  "evaluation": {
+    "scenario": "V118-REGISTRY-AUTHORITY-A-001",
+    "model": "No model · literal packet transport",
+    "generatedAt": "2026-10-05T19:43:39.319Z",
+    "runtimeLabel": "Current Production · Exact packet replay",
+    "harmonicRelease": null,
+    "governanceContractVersion": null,
+    "visibilitySchemaVersion": null,
+    "releaseClassification": null
+  },
+  "lane": {
+    "lane": "harmonic_governance",
+    "title": "Constitutional Runtime",
+    "response": "",
+    "evaluation": {
+      "available": true,
+      "decision": "ALLOW",
+      "summary": "Harmonic+ constitutional result from the unified transaction. Passed: Reality Contact, Authority Continuity, Consequence Boundary, Runtime Admissibility, Understanding Continuity, Obligation Continuity.",
+      "flags": [],
+      "primitiveResults": [
+        {
+          "key": "reality_contact",
+          "label": "Reality Contact",
+          "outcome": "CONTACT_CONFIRMED",
+          "admissible": "PASS",
+          "signals": [],
+          "metadata": [
+            {
+              "label": "Service",
+              "value": "reality-contact-core"
+            },
+            {
+              "label": "Version",
+              "value": "1.15.0-v41-epistemic-provenance"
+            },
+            {
+              "label": "Packet",
+              "value": "V118-REGISTRY-AUTHORITY-A-001"
+            }
+          ],
+          "artifactHash": "71a8cfc3868cb0abad9baacce4c6af7d781db4d996b446526d198a2f5e66521b"
+        },
+        {
+          "key": "authority_continuity",
+          "label": "Authority Continuity",
+          "outcome": "AUTHORITY_CONTINUOUS",
+          "admissible": "PASS",
+          "signals": [],
+          "metadata": [
+            {
+              "label": "Service",
+              "value": "authority-continuity-primitive"
+            },
+            {
+              "label": "Version",
+              "value": "1.9.1-v41-provenance-freshness-witness"
+            },
+            {
+              "label": "Packet",
+              "value": "V118-REGISTRY-AUTHORITY-A-001"
+            }
+          ],
+          "artifactHash": "9e2108e52b691c00018c1c37c766c953a57344044d2c4c7e4a231d48703411e3"
+        },
+        {
+          "key": "consequence_boundary",
+          "label": "Consequence Boundary",
+          "outcome": "BOUNDARY_LOW",
+          "admissible": "PASS",
+          "signals": [],
+          "metadata": [
+            {
+              "label": "Service",
+              "value": "consequence-boundary"
+            },
+            {
+              "label": "Version",
+              "value": "1.10.4-v41-current-state-crossing-fix"
+            },
+            {
+              "label": "Packet",
+              "value": "V118-REGISTRY-AUTHORITY-A-001"
+            },
+            {
+              "label": "Intensity",
+              "value": "standard"
+            },
+            {
+              "label": "Score",
+              "value": "2"
+            },
+            {
+              "label": "Level",
+              "value": "low"
+            },
+            {
+              "label": "Surface",
+              "value": "shared_execution"
+            },
+            {
+              "label": "Reversibility",
+              "value": "reversible"
+            }
+          ],
+          "artifactHash": "18d7e9b00c8084a9986f49ed2cdb1e2eb9c178395c100e9c34d5c22dfebc6eac"
+        },
+        {
+          "key": "runtime_admissibility",
+          "label": "Runtime Admissibility",
+          "outcome": "ADMISSIBLE",
+          "admissible": "PASS",
+          "signals": [
+            {
+              "primitive": "obligation",
+              "code": "obligation_not_applicable",
+              "severity": "info",
+              "message": "The supplied structured obligation witness explicitly establishes that no obligation applies to the represented execution transaction."
+            }
+          ],
+          "metadata": [
+            {
+              "label": "Service",
+              "value": "runtime-admissibility-core"
+            },
+            {
+              "label": "Version",
+              "value": "1.9.1-v41-current-state-crossing-fix"
+            },
+            {
+              "label": "Packet",
+              "value": "V118-REGISTRY-AUTHORITY-A-001"
+            },
+            {
+              "label": "Action",
+              "value": "allow"
+            }
+          ],
+          "action": "allow",
+          "artifactHash": "28e76d914c4cdc62b7ff67cf0a18e83d214cccfcd5aa1abd2ae66667347fd827"
+        },
+        {
+          "key": "understanding_continuity",
+          "label": "Understanding Continuity",
+          "outcome": "UNDERSTANDING_CURRENT",
+          "admissible": "PASS",
+          "signals": [],
+          "metadata": [
+            {
+              "label": "Service",
+              "value": "understanding-continuity-primitive"
+            },
+            {
+              "label": "Version",
+              "value": "1.2.0-v41-epistemic-absence"
+            }
+          ],
+          "artifactHash": "bcb429ccc86ec6ed2fad7a5cbe323532d628282f52091542d3f2d05566803b7d"
+        },
+        {
+          "key": "obligation_continuity",
+          "label": "Obligation Continuity",
+          "outcome": "NOT_APPLICABLE",
+          "admissible": "PASS",
+          "signals": [],
+          "metadata": [
+            {
+              "label": "Service",
+              "value": "obligation-continuity-primitive"
+            },
+            {
+              "label": "Version",
+              "value": "1.1.2-v41-explicit-violation-preservation"
+            },
+            {
+              "label": "Packet",
+              "value": "V118-REGISTRY-AUTHORITY-A-001"
+            }
+          ],
+          "artifactHash": "96eff9d3968af1f71d3c8605260dbc75308261edeb0615293a3d0b213b10b706"
+        }
+      ],
+      "raw": {
+        "service": "solace-governance-pack",
+        "version": "1.10.0-v4.1-governance-visibility-upgrade",
+        "runtime_version": "4.1.0",
+        "outcome": "PERMITTED",
+        "admissible": true,
+        "action": "allow",
+        "primitive_results": {
+          "understanding_continuity": {
+            "primitive": "understanding_continuity",
+            "service": "understanding-continuity-primitive",
+            "version": "1.2.0-v41-epistemic-absence",
+            "evaluated_at": "2026-10-05T19:43:38.833Z",
+            "outcome": "UNDERSTANDING_CURRENT",
+            "admissible": true,
+            "requires_revalidation": false,
+            "compatibility_mode": "structured_understanding",
+            "understanding_state": {
+              "current": true,
+              "complete": true,
+              "provenance_preserved": true,
+              "applicable": true,
+              "confidence": 1,
+              "unresolved_tension_count": 0,
+              "missing_information_count": 0,
+              "source_count": 7,
+              "revision_status": "current",
+              "state_transition": {
+                "prior_state_ref": "V118-T0-REGISTRY-ISSUER-GOVERNING",
+                "new_observation_refs": [
+                  "institutional-authority-registry#AUTH-REG-118-001",
+                  "institutional-charter-registry#v118-case-a-issuer-standing"
+                ],
+                "relationship": "consistent_with_prior_state",
+                "prior_state_status": null,
+                "revalidation_required": null,
+                "attributable_source": "federation-domain-pack@1.2.0-v118",
+                "observed_at": "2026-10-05T19:15:00.000Z",
+                "scope": [
+                  "federated_shared_consequence"
+                ]
+              }
+            },
+            "understanding_signals": [],
+            "summary": "The supplied understanding is current, traceable, applicable, and sufficient for downstream governance evaluation.",
+            "artifact_hash": "bcb429ccc86ec6ed2fad7a5cbe323532d628282f52091542d3f2d05566803b7d"
+          },
+          "reality_contact": {
+            "primitive": "reality_contact",
+            "service": "reality-contact-core",
+            "version": "1.15.0-v41-epistemic-provenance",
+            "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+            "outcome": "CONTACT_CONFIRMED",
+            "admissible": true,
+            "evaluated_at": "2026-10-05T19:43:38.833Z",
+            "drift_signals": [],
+            "boundary": {
+              "evaluates": "evidentiary contact between declared and observed operational reality, including required artifact existence for referenced documents/files/images/evidence, explicit incompatible state assertions across supplied sources, and observation-window gaps",
+              "does_not_evaluate": "ultimate truth, clinical judgment, legal authority, or domain permission"
+            },
+            "artifact_hash": "71a8cfc3868cb0abad9baacce4c6af7d781db4d996b446526d198a2f5e66521b"
+          },
+          "authority_continuity": {
+            "primitive": "authority_continuity",
+            "service": "authority-continuity-primitive",
+            "version": "1.9.1-v41-provenance-freshness-witness",
+            "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+            "outcome": "AUTHORITY_CONTINUOUS",
+            "admissible": true,
+            "evaluated_at": "2026-10-05T19:43:38.833Z",
+            "authority_signals": [],
+            "authority_state": {
+              "outcome": "AUTHORITY_CONTINUOUS",
+              "primary_authority_status": "valid",
+              "chain_status": "continuous",
+              "resolution_required": false,
+              "successor_claimed": false,
+              "interruption_claimed": false,
+              "primary_authority_interruption_claimed": false,
+              "scope_invalid": false,
+              "evidence_established": true,
+              "scope_changed": false,
+              "condition_failed": false
+            },
+            "boundary": {
+              "evaluates": "whether supplied authority evidence remains fresh, unrevoked, temporally valid, chain-continuous, scoped to the requested action and execution target, and classifies authority failures as interruption, transfer requirement, scope invalidation, scope change, condition failure, or true authority loss instead of collapsing every block into loss",
+              "does_not_evaluate": "ultimate legal authority, identity proofing, domain judgment, policy authorship, or execution itself"
+            },
+            "artifact_hash": "9e2108e52b691c00018c1c37c766c953a57344044d2c4c7e4a231d48703411e3"
+          },
+          "obligation_continuity": {
+            "primitive": "obligation_continuity",
+            "service": "obligation-continuity-primitive",
+            "version": "1.1.2-v41-explicit-violation-preservation",
+            "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+            "evaluated_at": "2026-10-05T19:43:38.833Z",
+            "outcome": "NOT_APPLICABLE",
+            "admissible": true,
+            "obligation_signals": [
+              {
+                "code": "obligation_not_applicable",
+                "severity": "info",
+                "source_class": "explicit_structured_witness",
+                "independently_verified": false,
+                "message": "The supplied structured obligation witness explicitly establishes that no obligation applies to the represented execution transaction."
+              }
+            ],
+            "obligation_state": {
+              "requirement_declared": true,
+              "requirement_clause": null,
+              "state": "not_applicable",
+              "waiver_or_exception_active": false,
+              "source_class": "explicit_structured_witness",
+              "independently_verified": false,
+              "source": "v118-examination:no-separate-obligation",
+              "evidence_refs": [
+                "v118-examination:no-separate-obligation"
+              ]
+            },
+            "boundary": {
+              "evaluates": "whether supplied obligations governing the proposed execution remain applicable and whether their required prerequisites, duties, prohibitions, conditions, waivers, and exceptions are presently satisfied before consequence binds",
+              "does_not_evaluate": "whether a policy is legally valid, policy authorship, actor authority, identity proofing, ultimate truth, domain correctness, or execution itself"
+            },
+            "artifact_hash": "96eff9d3968af1f71d3c8605260dbc75308261edeb0615293a3d0b213b10b706"
+          },
+          "consequence_boundary": {
+            "primitive": "consequence_boundary",
+            "service": "consequence-boundary",
+            "version": "1.10.4-v41-current-state-crossing-fix",
+            "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+            "evaluated_at": "2026-10-05T19:43:38.833Z",
+            "outcome": "BOUNDARY_LOW",
+            "admissible": true,
+            "governance_intensity": "standard",
+            "consequence_score": 2,
+            "consequence_topology": {
+              "classification_status": "ESTABLISHED",
+              "level": "low",
+              "reversibility": "reversible",
+              "execution_surface": "shared_execution",
+              "transport_surface": null,
+              "declared_execution_surface": "shared_execution",
+              "binding_surface": "shared_execution",
+              "binding_surface_source": "direct_execution_binding",
+              "governed_surface": "shared_execution",
+              "execution_surface_established": true,
+              "downstream_binding_surface_established": false,
+              "direct_binding_execution": true,
+              "consequence_surface_established": true,
+              "transport_binding_equivalent": null,
+              "propagation_targets": [],
+              "binding_moments": [],
+              "blast_radius": "local",
+              "dependency_chain_depth": 0
+            },
+            "consequence_invariant": {
+              "invariant": "CONSEQUENCE_SURFACE_INVARIANT",
+              "rule": "Admissibility is governed against the represented downstream binding consequence, not merely the transport surface. An unestablished downstream consequence surface cannot inherit a lower-risk transport classification.",
+              "transport_surface": null,
+              "binding_surface": "shared_execution",
+              "binding_surface_source": "direct_execution_binding",
+              "governed_surface": "shared_execution",
+              "execution_surface_established": true,
+              "downstream_binding_surface_established": false,
+              "direct_binding_execution": true,
+              "downstream_consequence_declared": false,
+              "consequence_profile_present": true,
+              "consequence_surface_established": true,
+              "unestablished_reason": null,
+              "invariant_status": "ENFORCED",
+              "surface_status": "ESTABLISHED",
+              "satisfied": true
+            },
+            "boundary_signals": [],
+            "boundary": {
+              "crossing_detected": false,
+              "requires_revalidation": false,
+              "requires_operator_review": false,
+              "operator_review_required": false,
+              "operator_review_satisfied": null,
+              "requires_additional_operator_review": false,
+              "should_block_execution": false
+            },
+            "artifact_hash": "18d7e9b00c8084a9986f49ed2cdb1e2eb9c178395c100e9c34d5c22dfebc6eac"
+          },
+          "runtime_admissibility": {
+            "primitive": "runtime_admissibility",
+            "service": "runtime-admissibility-core",
+            "version": "1.9.1-v41-current-state-crossing-fix",
+            "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+            "evaluated_at": "2026-10-05T19:43:38.833Z",
+            "outcome": "ADMISSIBLE",
+            "admissible": true,
+            "action": "allow",
+            "failed_primitives": [],
+            "admissibility_signals": [
+              {
+                "primitive": "obligation",
+                "code": "obligation_not_applicable",
+                "severity": "info",
+                "source_class": "explicit_structured_witness",
+                "independently_verified": false,
+                "message": "The supplied structured obligation witness explicitly establishes that no obligation applies to the represented execution transaction."
+              }
+            ],
+            "continuity_state": {
+              "life_safety_context": false,
+              "emergency_continuity_defined": false,
+              "primary_authority_available": null,
+              "successor_authority_available": null,
+              "escalation_available": null,
+              "operator_review_confirmed": true,
+              "explicit_emergency_activation": false,
+              "critical_context": false,
+              "authority_resolution": {
+                "resolution": "operator_review_confirmed",
+                "mode": "review_confirmed",
+                "target": "federated-execution-agent",
+                "primary_authority": "federated-execution-agent",
+                "successor_authority": "institutional-execution-authority",
+                "emergency_authority": null,
+                "chain_available_successor": {
+                  "index": 1,
+                  "actor": "institutional-execution-authority"
+                }
+              }
+            },
+            "decision_reason": "All required governance primitives satisfied minimum admissibility conditions.",
+            "boundary": {
+              "evaluates": "whether live runtime legitimacy survives across state, authority, obligation, consequence, primitive outcomes, escalation availability, authority succession, and explicit emergency continuity paths",
+              "does_not_evaluate": "domain expertise, human legal judgment, clinical judgment, or final organizational accountability"
+            },
+            "artifact_hash": "28e76d914c4cdc62b7ff67cf0a18e83d214cccfcd5aa1abd2ae66667347fd827"
+          }
+        },
+        "execution_boundary": {
+          "should_execute": true,
+          "requires_constraint": false,
+          "requires_escalation": false,
+          "escalation_action": null,
+          "escalation_target": null,
+          "requires_emergency_continuity": false,
+          "emergency_continuity_active": false,
+          "emergency_authority": null,
+          "should_block_execution": false,
+          "reason": "All required governance primitives satisfied minimum admissibility conditions."
+        },
+        "response_binding": {
+          "service": "governed-execution-binding",
+          "version": "1.3.1-v41-governance-visibility",
+          "mode": "EXECUTION_ALLOWED",
+          "final_decision": "ALLOW",
+          "decision_label": "Allow",
+          "response_binding_enforced": true,
+          "binding_scope": "governed_response_contract_only",
+          "downstream_execution_enforced": false,
+          "binding_enforced": true,
+          "response_must_match_execution_boundary": true,
+          "required_response_stance": "may_authorize_execution",
+          "execution_action": "allow",
+          "runtime_action": "allow",
+          "should_execute": true,
+          "requires_constraint": false,
+          "requires_escalation": false,
+          "escalation_action": null,
+          "escalation_target": null,
+          "requires_emergency_continuity": false,
+          "should_block_execution": false,
+          "execution_status": null,
+          "operator_guidance": [],
+          "continuation_rule": null,
+          "replay_required": false,
+          "evidence_required": false,
+          "constitutional_snapshot_required": false,
+          "constitutional_receipt_required": false,
+          "allowed_response_intents": [
+            "authorize_evaluated_execution",
+            "explain_governance_state",
+            "preserve_audit_context"
+          ],
+          "prohibited_response_intents": [
+            "authorize_out_of_scope_execution"
+          ],
+          "binding_instruction": "Governance Decision: Allow.\n\nExecution may proceed under the evaluated governance state.\n\nRequired stance: lead with ALLOW, explain why execution is admissible under the evaluated governance state, and preserve audit context. Do not broaden authorization beyond the evaluated packet.\n\nGovernance reason: All required governance primitives satisfied minimum admissibility conditions.",
+          "proposed_response_review": {
+            "supplied": false,
+            "compliant": true,
+            "violations": [],
+            "reviewed_text_hash": null
+          },
+          "artifact_hash": "c78769d692231ac5e6cf7724a002d65e6ef50a4356f7af52b94eb444a37687da"
+        },
+        "governed_response": "Governance Decision: Allow.\n\nExecution may proceed under the evaluated governance state.\n\nRequired stance: lead with ALLOW, explain why execution is admissible under the evaluated governance state, and preserve audit context. Do not broaden authorization beyond the evaluated packet.\n\nGovernance reason: All required governance primitives satisfied minimum admissibility conditions.",
+        "artifact_hash": "b1486d0110cd965c8a56cc30e5ad505c43663775c7ba9f978de08cacdf1b0422",
+        "unified_transaction": {
+          "api_version": "v4-single-call",
+          "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+          "evidence_bearing": true,
+          "determination": "PERMITTED",
+          "admissible": true,
+          "action": "allow",
+          "determination_reason": "All required governance primitives satisfied minimum admissibility conditions.",
+          "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+          "determination_hash": "050893b3a384f523d44477923f1ad9c751f2e9d909e9866823a576ad15e3726a",
+          "receipt_id": "CR-b0ea215a-826c-4ed8-92ad-a5e12b8c2591",
+          "receipt_hash": "6a0b264fa9982182142ab39103600256689dbef3f7be1fc0ae84c27bdefee5e8",
+          "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060",
+          "determination_currency": "CURRENT_AS_RECORDED",
+          "replay_status": "NOT_EXERCISED",
+          "transaction_digest": "e34a1f1d7e87e54c3ca7918d5293750987d36f06d508be99306acc1c0fb5a97c",
+          "secure_execution": null
+        },
+        "constitutional_transaction": {
+          "contract": "single_api_call",
+          "api_version": "v4-single-call",
+          "transaction_model_version": "4.1.0",
+          "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+          "evidence_bearing": true,
+          "present_state": {
+            "binding_version": "4.1.0",
+            "state_hash": "1f6505faa0eced1cf5aed05355976edfe67b4f712e7979e5f9b1085649dfbb9b",
+            "snapshot_id": "b907894d-2e26-4e0f-ac0f-6e05da58fd2a",
+            "established_at": "2026-10-05T19:15:00.000Z",
+            "attributable_source": "federation-domain-pack@1.2.0-v118",
+            "epistemic_status": "ESTABLISHED",
+            "source_evidence_refs": [
+              "institutional-authority-registry#AUTH-REG-118-001",
+              "institutional-charter-registry#v118-case-a-issuer-standing",
+              "registry-issuer-standing-rule@1",
+              "rule-r1@1",
+              "federation-domain-pack@1.2.0-v118"
+            ],
+            "derivation_ref": null,
+            "derivation_method": null,
+            "derivation_hash": null,
+            "reconstruction_boundary": "Upstream cognition establishes the attributable present-state representation; Harmonic evaluates admissibility against the supplied state and does not independently infer domain state.",
+            "reconstructability": {
+              "state_bound": true,
+              "attributable_source_present": true,
+              "evidence_lineage_present": true,
+              "epistemic_status_explicit": true,
+              "overall": "reconstructable"
+            },
+            "non_claims": [
+              "Present-state binding does not prove the independent truth or completeness of the supplied domain state.",
+              "Harmonic does not infer clinical, legal, financial, or other domain state merely from raw observations."
+            ],
+            "present_state_binding_hash": "7307c6c0877a601169725f287f576cf3bd16f97a6994fa89b6e292320fead261"
+          },
+          "determination": {
+            "outcome": "PERMITTED",
+            "admissible": true,
+            "action": "allow",
+            "reason": "All required governance primitives satisfied minimum admissibility conditions.",
+            "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+            "determination_hash": "050893b3a384f523d44477923f1ad9c751f2e9d909e9866823a576ad15e3726a"
+          },
+          "dependencies": {
+            "manifest": {
+              "dependency_model_version": "4.1.0",
+              "derivation_version": "runtime_materiality/v3-causal-provenance",
+              "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+              "dependencies": {
+                "authority": [],
+                "obligations": [
+                  "v118-examination:no-separate-obligation"
+                ],
+                "evidence": [
+                  "execution-region-registry-a#execution_region",
+                  "institutional-authority-registry#AUTH-REG-118-001",
+                  "institutional-charter-registry#v118-case-a-issuer-standing"
+                ],
+                "state": [
+                  "1f6505faa0eced1cf5aed05355976edfe67b4f712e7979e5f9b1085649dfbb9b"
+                ],
+                "continuity": []
+              },
+              "derived_constitutional_dependencies": {
+                "derivation": "runtime_materiality/v3-causal-provenance",
+                "controlling_primitives": [
+                  {
+                    "primitive": "authority_continuity",
+                    "role": "SUPPORTING_ADMISSIBILITY",
+                    "outcome": "AUTHORITY_CONTINUOUS",
+                    "admissible": true,
+                    "version": "1.9.1-v41-provenance-freshness-witness",
+                    "artifact_hash": "9e2108e52b691c00018c1c37c766c953a57344044d2c4c7e4a231d48703411e3"
+                  },
+                  {
+                    "primitive": "consequence_boundary",
+                    "role": "SUPPORTING_ADMISSIBILITY",
+                    "outcome": "BOUNDARY_LOW",
+                    "admissible": true,
+                    "version": "1.10.4-v41-current-state-crossing-fix",
+                    "artifact_hash": "18d7e9b00c8084a9986f49ed2cdb1e2eb9c178395c100e9c34d5c22dfebc6eac"
+                  },
+                  {
+                    "primitive": "obligation_continuity",
+                    "role": "EVALUATED_CONTEXTUAL_PRIMITIVE",
+                    "outcome": "NOT_APPLICABLE",
+                    "admissible": true,
+                    "version": "1.1.2-v41-explicit-violation-preservation",
+                    "artifact_hash": "96eff9d3968af1f71d3c8605260dbc75308261edeb0615293a3d0b213b10b706"
+                  },
+                  {
+                    "primitive": "reality_contact",
+                    "role": "SUPPORTING_ADMISSIBILITY",
+                    "outcome": "CONTACT_CONFIRMED",
+                    "admissible": true,
+                    "version": "1.15.0-v41-epistemic-provenance",
+                    "artifact_hash": "71a8cfc3868cb0abad9baacce4c6af7d781db4d996b446526d198a2f5e66521b"
+                  },
+                  {
+                    "primitive": "runtime_admissibility",
+                    "role": "RUNTIME_SYNTHESIS",
+                    "outcome": "ADMISSIBLE",
+                    "admissible": true,
+                    "version": "1.9.1-v41-current-state-crossing-fix",
+                    "artifact_hash": "28e76d914c4cdc62b7ff67cf0a18e83d214cccfcd5aa1abd2ae66667347fd827"
+                  },
+                  {
+                    "primitive": "understanding_continuity",
+                    "role": "SUPPORTING_ADMISSIBILITY",
+                    "outcome": "UNDERSTANDING_CURRENT",
+                    "admissible": true,
+                    "version": "1.2.0-v41-epistemic-absence",
+                    "artifact_hash": "bcb429ccc86ec6ed2fad7a5cbe323532d628282f52091542d3f2d05566803b7d"
+                  }
+                ],
+                "controlling_signals": [],
+                "contextual_signals": [
+                  {
+                    "index": 0,
+                    "primitive": "obligation",
+                    "code": "obligation_not_applicable",
+                    "severity": "info",
+                    "source_class": "explicit_structured_witness",
+                    "independently_verified": false,
+                    "target_authority": null,
+                    "reason": null
+                  }
+                ],
+                "material_evidence": [
+                  {
+                    "ref": "execution-region-registry-a#execution_region",
+                    "role": "PRESENT_STATE_OBSERVATION",
+                    "source": "observed_reality",
+                    "statement": "Source A reports execution_region = EU-WEST."
+                  },
+                  {
+                    "ref": "institutional-authority-registry#AUTH-REG-118-001",
+                    "role": "PRESENT_STATE_OBSERVATION",
+                    "source": "observed_reality",
+                    "statement": "The authority-registry record remains current, signed, attributable, internally valid and unchanged across the frozen pair."
+                  },
+                  {
+                    "ref": "institutional-charter-registry#v118-case-a-issuer-standing",
+                    "role": "PRESENT_STATE_OBSERVATION",
+                    "source": "observed_reality",
+                    "statement": "Independent charter evidence reports issuer standing as GOVERNING for execution_region_for_shared_execution at 2026-10-05T19:15:00.000Z."
+                  }
+                ],
+                "runtime_outcome": "PERMITTED",
+                "runtime_admissible": true,
+                "runtime_action": "allow",
+                "non_claims": [
+                  "Derived constitutional dependencies preserve the primitive artifacts and runtime signals that materially controlled the recorded determination; they do not independently establish domain truth.",
+                  "A dependency record is constitutional provenance, not a claim that every passing primitive was necessary for every counterfactual outcome."
+                ],
+                "derived_dependency_hash": "3886a85d9a3d77e2fb7d0915289ee6505fb22ba377a39d672552c1233e1d81f3"
+              },
+              "dependency_counts": {
+                "authority": 0,
+                "obligations": 1,
+                "evidence": 3,
+                "state": 1,
+                "continuity": 0,
+                "controlling_primitives": 6,
+                "controlling_signals": 0,
+                "contextual_signals": 1,
+                "material_evidence": 3
+              },
+              "declaration_status": "DECLARED_AND_RUNTIME_DERIVED",
+              "semantic_rule": "Historical determination content remains immutable. A material dependency change can make the determination no longer current without making the historical determination incorrect.",
+              "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060"
+            },
+            "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060"
+          },
+          "currency": {
+            "currency_model_version": "4.1.0",
+            "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+            "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060",
+            "status": "CURRENT_AS_RECORDED",
+            "effective_at": "2026-10-05T19:43:38.833Z",
+            "basis": "The determination is current only with respect to the dependency state captured at evaluation time. Future dependency changes require a new currency observation or re-evaluation.",
+            "historical_determination_mutated": false,
+            "currency_hash": "e05cd6583f34528234fdf26b146d81f264cc2887ace8848e6bfe45713618bd3d"
+          },
+          "execution": {
+            "boundary": {
+              "should_execute": true,
+              "requires_constraint": false,
+              "requires_escalation": false,
+              "escalation_action": null,
+              "escalation_target": null,
+              "requires_emergency_continuity": false,
+              "emergency_continuity_active": false,
+              "emergency_authority": null,
+              "should_block_execution": false,
+              "reason": "All required governance primitives satisfied minimum admissibility conditions."
+            },
+            "status": "NOT_EXECUTED_BY_HARMONIC",
+            "downstream_execution_enforced": false
+          },
+          "receipt": {
+            "receipt_id": "CR-b0ea215a-826c-4ed8-92ad-a5e12b8c2591",
+            "receipt_hash": "6a0b264fa9982182142ab39103600256689dbef3f7be1fc0ae84c27bdefee5e8"
+          },
+          "replay": {
+            "status": "NOT_EXERCISED",
+            "range_binding": null
+          },
+          "integrity": {
+            "transaction_digest": "e34a1f1d7e87e54c3ca7918d5293750987d36f06d508be99306acc1c0fb5a97c",
+            "transaction_digest_scope": "canonical_determination_state_dependencies_and_execution_boundary",
+            "projection_digest": null,
+            "projection_integrity": "NOT_EXERCISED"
+          },
+          "non_claims": [
+            "The initial universal evaluation does not claim that replay has been exercised.",
+            "Unless Secure Execution reports executed=true, this transaction does not claim that a downstream executor acted or that an outcome occurred.",
+            "Projection verification is a later evidentiary operation and is not silently treated as PASS at transaction creation."
+          ]
+        },
+        "harness_request_witness": {
+          "adapter_build": "v107-playground-witness-integrity-2026-08-28",
+          "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+          "prompt_present": false,
+          "scenario_prompt_present": false,
+          "scenario_label": null,
+          "methodology": {
+            "version": "v107-playground-witness-integrity-2026-08-28",
+            "hash": "4a61c1a39f64da68a418f4c8cd7a37ef0dc9b47acb21742b0d57b1e1b6a69f1b",
+            "mode": "exact_packet_replay",
+            "disposition_authority": "harmonic",
+            "harness_derived_fields": [],
+            "harness_inference_enabled": false,
+            "freshness_stamped_by_harness": false,
+            "whole_prompt_promoted_to_current_reality": false
+          },
+          "canonical_packet": {
+            "sha256": "f9669895354294c08110070a23fa42fdd11a60c070016ba9e63686618ff5bb04",
+            "canonical_bytes": 5777,
+            "export": {
+              "requested_action": {
+                "type": "shared_execution",
+                "scope": [
+                  "federated_shared_consequence"
+                ],
+                "reversibility": "reversible"
+              },
+              "understanding_state": {
+                "current": true,
+                "complete": true,
+                "provenance_preserved": true,
+                "applicable": true,
+                "confidence": 1,
+                "source_ids": [
+                  "execution-region-registry-a",
+                  "execution-region-registry-b",
+                  "institutional-authority-registry",
+                  "institutional-charter-registry",
+                  "registry-issuer-standing-rule@1",
+                  "rule-r1@1",
+                  "federation-domain-pack@1.2.0-v118"
+                ],
+                "unresolved_tensions": [],
+                "missing_information": [],
+                "revision_status": "current"
+              },
+              "declared_reality": {
+                "current_state_claims": [
+                  "The authority-registry statement content, signature, provenance and record status are identical across the frozen pair.",
+                  "Registry content validity and registry/issuer standing are separate frozen variables.",
+                  "The registry statement may not establish its own issuer standing."
+                ],
+                "last_verified_at": "2026-10-05T19:15:00.000Z"
+              },
+              "relational_rule": {
+                "rule_id": "rule-r1",
+                "version": "1",
+                "constituted_at": "T0",
+                "scope": [
+                  "federated_shared_consequence"
+                ],
+                "expression": "currently_governing_source.execution_region MUST_EQUAL consequence.required_execution_region for shared_execution",
+                "source": "federation-constitution-r1"
+              },
+              "governing_basis": {
+                "constituted_at": "T0",
+                "domain_rule_ref": "rule-r1@1",
+                "issuer_standing_rule_ref": "registry-issuer-standing-rule@1",
+                "transition_vocabulary_contract": "Harmonic V3_8 state_transition relationship vocabulary",
+                "case_specific_constitutional_answer_supplied": false
+              },
+              "authority_chain": {
+                "subject": "federated-execution-agent",
+                "issuer": "institutional-execution-authority",
+                "scope": [
+                  "federated_shared_consequence"
+                ],
+                "last_verified_at": "2026-10-05T19:15:00.000Z",
+                "chain": [
+                  {
+                    "actor": "federated-execution-agent",
+                    "status": "active"
+                  },
+                  {
+                    "actor": "institutional-execution-authority",
+                    "status": "active"
+                  }
+                ]
+              },
+              "revocation_state": {
+                "last_revocation_check_at": "2026-10-05T19:15:00.000Z",
+                "known_revocations": []
+              },
+              "obligation_witness": {
+                "detected": true,
+                "status": "not_applicable",
+                "source": "v118-examination:no-separate-obligation",
+                "evidence_refs": [
+                  "v118-examination:no-separate-obligation"
+                ]
+              },
+              "consequence_profile": {
+                "level": "low",
+                "reversibility": "reversible",
+                "execution_surface": "shared_execution",
+                "blast_radius": "local"
+              },
+              "safeguards": {
+                "operator_review_confirmed": true
+              },
+              "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+              "observed_reality": {
+                "signals": [
+                  {
+                    "statement": "Source A reports execution_region = EU-WEST.",
+                    "source": "execution-region-registry-a",
+                    "evidence_ref": "execution-region-registry-a#execution_region"
+                  },
+                  {
+                    "statement": "The authority-registry record remains current, signed, attributable, internally valid and unchanged across the frozen pair.",
+                    "source": "institutional-authority-registry",
+                    "evidence_ref": "institutional-authority-registry#AUTH-REG-118-001"
+                  },
+                  {
+                    "statement": "Independent charter evidence reports issuer standing as GOVERNING for execution_region_for_shared_execution at 2026-10-05T19:15:00.000Z.",
+                    "source": "institutional-charter-registry",
+                    "evidence_ref": "institutional-charter-registry#v118-case-a-issuer-standing"
+                  }
+                ]
+              },
+              "present_state_provenance": {
+                "attributable_source": "federation-domain-pack@1.2.0-v118",
+                "established_at": "2026-10-05T19:15:00.000Z",
+                "epistemic_status": "ESTABLISHED",
+                "evidence_refs": [
+                  "institutional-authority-registry#AUTH-REG-118-001",
+                  "institutional-charter-registry#v118-case-a-issuer-standing",
+                  "registry-issuer-standing-rule@1",
+                  "rule-r1@1",
+                  "federation-domain-pack@1.2.0-v118"
+                ]
+              },
+              "state_transition": {
+                "prior_state_ref": "V118-T0-REGISTRY-ISSUER-GOVERNING",
+                "new_observation_refs": [
+                  "institutional-authority-registry#AUTH-REG-118-001",
+                  "institutional-charter-registry#v118-case-a-issuer-standing"
+                ],
+                "relationship": "consistent_with_prior_state",
+                "attributable_source": "federation-domain-pack@1.2.0-v118",
+                "observed_at": "2026-10-05T19:15:00.000Z",
+                "scope": [
+                  "federated_shared_consequence"
+                ]
+              },
+              "specialty_pack_evidence": {
+                "specialty_pack": "federation-domain-pack@1.2.0-v118",
+                "constitution_status": "CONSTITUTED",
+                "proposition_id": "execution_region_for_shared_execution",
+                "proposition_value": "EU-WEST",
+                "governing_source_id": "execution-region-registry-a",
+                "authority_registry_record_id": "AUTH-REG-118-001",
+                "registry_statement_content_valid": true,
+                "registry_issuer_id": "institutional-source-governance-office",
+                "registry_issuer_standing": "GOVERNING",
+                "registry_issuer_standing_basis_ref": "institutional-charter#source-governance-office-v1",
+                "registry_issuer_authority_effective_interval": {
+                  "from": "2026-01-01T00:00:00.000Z",
+                  "until": "2026-10-05T20:00:00.000Z"
+                },
+                "issuer_standing_evidence_source": "institutional-charter-registry",
+                "anti_circularity_satisfied": true,
+                "relationship": "consistent",
+                "relationship_basis": "valid registry statement is empowered by independently standing issuer and selects Source A, whose value matches the frozen domain rule",
+                "domain_rule_ref": "rule-r1@1",
+                "scope": "federated_shared_consequence",
+                "constitutional_answer_supplied": false
+              }
+            }
+          },
+          "fixture_evidence": {
+            "reality_supplied": false,
+            "reality_source": "exact_packet_replay",
+            "declared_claim_count": 0,
+            "observed_signal_count": 0,
+            "consequence_profile_supplied": false,
+            "consequence_profile_source": "exact_packet_replay"
+          },
+          "model_response_binding": {
+            "role": "exact_packet_replay",
+            "used_as_observed_reality": false,
+            "response_supplied": false
+          },
+          "synthetic_fixture": {
+            "translated": false,
+            "source": null,
+            "fields": []
+          },
+          "requested_action": {
+            "present_in_packet": true,
+            "caller_supplied": true,
+            "provenance": "exact_packet_replay",
+            "type": "shared_execution",
+            "scope": [
+              "federated_shared_consequence"
+            ]
+          },
+          "authority_provenance": {
+            "supplied": false,
+            "source": "not_supplied",
+            "authority_history_event_count": 0,
+            "original_authority_supplied": false,
+            "authority_change_supplied": false,
+            "current_authority_supplied": false
+          },
+          "obligation": {
+            "supplied": true,
+            "kind": null,
+            "status": "not_applicable",
+            "waiver_or_exception_active": null,
+            "source": "v118-examination:no-separate-obligation"
+          },
+          "state_provenance": {
+            "supplied": true,
+            "source": "exact_packet_replay",
+            "attributable_source": "federation-domain-pack@1.2.0-v118",
+            "epistemic_status": "ESTABLISHED",
+            "fixture_epistemic_status": null,
+            "evidence_ref_count": 5
+          },
+          "downstream_accountability": {
+            "supplied": false,
+            "enforcement_layer_supplied": false,
+            "next_decision_owner_supplied": false,
+            "consequence_owner_supplied": false
+          },
+          "continuity": {
+            "life_safety_context": null,
+            "primary_authority_available": null,
+            "emergency_continuity_defined": null,
+            "explicit_emergency_activation": null,
+            "emergency_authority_available": null,
+            "emergency_authority": null
+          },
+          "mode": "exact_packet_replay",
+          "exact_packet_replay": true,
+          "semantic_translation_performed": false,
+          "llm_involved_in_packet_construction": false,
+          "outbound_sha256": "f9669895354294c08110070a23fa42fdd11a60c070016ba9e63686618ff5bb04",
+          "outbound_bytes": 5777,
+          "transport_rule": "The operator-supplied JSON body was forwarded to /api/evaluate without semantic translation."
+        }
+      }
+    }
+  },
+  "engineeringRecord": {
+    "Replay Mode": "EXACT_PACKET_REPLAY · no model · no semantic translation",
+    "Outbound Packet SHA-256": "f9669895354294c08110070a23fa42fdd11a60c070016ba9e63686618ff5bb04",
+    "Outbound Packet Bytes": "5777",
+    "Replay Packet ID": "V118-REGISTRY-AUTHORITY-A-001",
+    "Execution Packet": "V118-REGISTRY-AUTHORITY-A-001-2026-10-05T19:43:39.319Z",
+    "Harmonic Release": "Current Production · Exact packet replay",
+    "Governance Contract": "Not returned",
+    "Visibility Schema": "Not returned",
+    "Release Classification": "Not returned",
+    "API Contract": "Universal single call · /api/evaluate",
+    "Runtime": "External Harmonic / Governance Pack",
+    "Runtime Version": "V4.1.0",
+    "Runtime Build": "1.10.4-v41-current-state-crossing-fix",
+    "Consequence Boundary": "1.10.4-v41-current-state-crossing-fix",
+    "Governance Pack": "1.10.0",
+    "Governance Pack Build": "1.10.0-v4.1-governance-visibility-upgrade",
+    "Execution Binding": "Constitutional Runtime → Allow",
+    "Primitive Hashes": "Reality Contact: 71a8cfc3868cb0abad… · Authority Continuity: 9e2108e52b691c0001… · Consequence Boundary: 18d7e9b00c8084a998… · Runtime Admissibility: 28e76d914c4cdc62b7… · Understanding Continuity: bcb429ccc86ec6ed2f… · Obligation Continuity: 96eff9d3968af1f71d…",
+    "Artifact Lineage": "T0 Recommendation Created → T1 Reality Changed → T2 Execution Requested → T3 Constitutional Runtime → T4 Execution Decision",
+    "Present State": "1f6505faa0eced1cf5aed05355976edfe67b4f712e7979e5f9b1085649dfbb9b",
+    "State Provenance": "Attributable provenance returned",
+    "Epistemic Status": "ESTABLISHED",
+    "Declared Consequence Surface": "shared_execution",
+    "Binding Consequence Surface": "shared_execution",
+    "Governed Consequence Surface": "shared_execution",
+    "Consequence Surface Status": "execution=true · downstream=false · direct=true · invariant=true",
+    "Consequence Level / Reversibility": "low · reversible",
+    "Causal Signals": "0 blocking · 1 contextual",
+    "Determination": "PERMITTED · admissible=true · action=allow",
+    "Determination Identity": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6 · 050893b3a384f523d4…",
+    "Dependencies": "9 manifest fields · root a2bb79048d067acfc4…",
+    "Determination Currency": "CURRENT_AS_RECORDED",
+    "Execution Status": "NOT_EXECUTED_BY_HARMONIC",
+    "Receipt": "CR-b0ea215a-826c-4ed8-92ad-a5e12b8c2591 · 6a0b264fa998218214…",
+    "Replay Status": "NOT_EXERCISED",
+    "Evidence Range": "NOT_EXERCISED / not returned",
+    "Transaction Digest": "e34a1f1d7e87e54c3ca7918d5293750987d36f06d508be99306acc1c0fb5a97c",
+    "Projection Integrity": "NOT_EXERCISED",
+    "V2 Evidence Chain": "Not evaluated"
+  },
+  "rawRuntimePayload": {
+    "service": "solace-governance-pack",
+    "version": "1.10.0-v4.1-governance-visibility-upgrade",
+    "runtime_version": "4.1.0",
+    "outcome": "PERMITTED",
+    "admissible": true,
+    "action": "allow",
+    "primitive_results": {
+      "understanding_continuity": {
+        "primitive": "understanding_continuity",
+        "service": "understanding-continuity-primitive",
+        "version": "1.2.0-v41-epistemic-absence",
+        "evaluated_at": "2026-10-05T19:43:38.833Z",
+        "outcome": "UNDERSTANDING_CURRENT",
+        "admissible": true,
+        "requires_revalidation": false,
+        "compatibility_mode": "structured_understanding",
+        "understanding_state": {
+          "current": true,
+          "complete": true,
+          "provenance_preserved": true,
+          "applicable": true,
+          "confidence": 1,
+          "unresolved_tension_count": 0,
+          "missing_information_count": 0,
+          "source_count": 7,
+          "revision_status": "current",
+          "state_transition": {
+            "prior_state_ref": "V118-T0-REGISTRY-ISSUER-GOVERNING",
+            "new_observation_refs": [
+              "institutional-authority-registry#AUTH-REG-118-001",
+              "institutional-charter-registry#v118-case-a-issuer-standing"
+            ],
+            "relationship": "consistent_with_prior_state",
+            "prior_state_status": null,
+            "revalidation_required": null,
+            "attributable_source": "federation-domain-pack@1.2.0-v118",
+            "observed_at": "2026-10-05T19:15:00.000Z",
+            "scope": [
+              "federated_shared_consequence"
+            ]
+          }
+        },
+        "understanding_signals": [],
+        "summary": "The supplied understanding is current, traceable, applicable, and sufficient for downstream governance evaluation.",
+        "artifact_hash": "bcb429ccc86ec6ed2fad7a5cbe323532d628282f52091542d3f2d05566803b7d"
+      },
+      "reality_contact": {
+        "primitive": "reality_contact",
+        "service": "reality-contact-core",
+        "version": "1.15.0-v41-epistemic-provenance",
+        "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+        "outcome": "CONTACT_CONFIRMED",
+        "admissible": true,
+        "evaluated_at": "2026-10-05T19:43:38.833Z",
+        "drift_signals": [],
+        "boundary": {
+          "evaluates": "evidentiary contact between declared and observed operational reality, including required artifact existence for referenced documents/files/images/evidence, explicit incompatible state assertions across supplied sources, and observation-window gaps",
+          "does_not_evaluate": "ultimate truth, clinical judgment, legal authority, or domain permission"
+        },
+        "artifact_hash": "71a8cfc3868cb0abad9baacce4c6af7d781db4d996b446526d198a2f5e66521b"
+      },
+      "authority_continuity": {
+        "primitive": "authority_continuity",
+        "service": "authority-continuity-primitive",
+        "version": "1.9.1-v41-provenance-freshness-witness",
+        "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+        "outcome": "AUTHORITY_CONTINUOUS",
+        "admissible": true,
+        "evaluated_at": "2026-10-05T19:43:38.833Z",
+        "authority_signals": [],
+        "authority_state": {
+          "outcome": "AUTHORITY_CONTINUOUS",
+          "primary_authority_status": "valid",
+          "chain_status": "continuous",
+          "resolution_required": false,
+          "successor_claimed": false,
+          "interruption_claimed": false,
+          "primary_authority_interruption_claimed": false,
+          "scope_invalid": false,
+          "evidence_established": true,
+          "scope_changed": false,
+          "condition_failed": false
+        },
+        "boundary": {
+          "evaluates": "whether supplied authority evidence remains fresh, unrevoked, temporally valid, chain-continuous, scoped to the requested action and execution target, and classifies authority failures as interruption, transfer requirement, scope invalidation, scope change, condition failure, or true authority loss instead of collapsing every block into loss",
+          "does_not_evaluate": "ultimate legal authority, identity proofing, domain judgment, policy authorship, or execution itself"
+        },
+        "artifact_hash": "9e2108e52b691c00018c1c37c766c953a57344044d2c4c7e4a231d48703411e3"
+      },
+      "obligation_continuity": {
+        "primitive": "obligation_continuity",
+        "service": "obligation-continuity-primitive",
+        "version": "1.1.2-v41-explicit-violation-preservation",
+        "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+        "evaluated_at": "2026-10-05T19:43:38.833Z",
+        "outcome": "NOT_APPLICABLE",
+        "admissible": true,
+        "obligation_signals": [
+          {
+            "code": "obligation_not_applicable",
+            "severity": "info",
+            "source_class": "explicit_structured_witness",
+            "independently_verified": false,
+            "message": "The supplied structured obligation witness explicitly establishes that no obligation applies to the represented execution transaction."
+          }
+        ],
+        "obligation_state": {
+          "requirement_declared": true,
+          "requirement_clause": null,
+          "state": "not_applicable",
+          "waiver_or_exception_active": false,
+          "source_class": "explicit_structured_witness",
+          "independently_verified": false,
+          "source": "v118-examination:no-separate-obligation",
+          "evidence_refs": [
+            "v118-examination:no-separate-obligation"
+          ]
+        },
+        "boundary": {
+          "evaluates": "whether supplied obligations governing the proposed execution remain applicable and whether their required prerequisites, duties, prohibitions, conditions, waivers, and exceptions are presently satisfied before consequence binds",
+          "does_not_evaluate": "whether a policy is legally valid, policy authorship, actor authority, identity proofing, ultimate truth, domain correctness, or execution itself"
+        },
+        "artifact_hash": "96eff9d3968af1f71d3c8605260dbc75308261edeb0615293a3d0b213b10b706"
+      },
+      "consequence_boundary": {
+        "primitive": "consequence_boundary",
+        "service": "consequence-boundary",
+        "version": "1.10.4-v41-current-state-crossing-fix",
+        "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+        "evaluated_at": "2026-10-05T19:43:38.833Z",
+        "outcome": "BOUNDARY_LOW",
+        "admissible": true,
+        "governance_intensity": "standard",
+        "consequence_score": 2,
+        "consequence_topology": {
+          "classification_status": "ESTABLISHED",
+          "level": "low",
+          "reversibility": "reversible",
+          "execution_surface": "shared_execution",
+          "transport_surface": null,
+          "declared_execution_surface": "shared_execution",
+          "binding_surface": "shared_execution",
+          "binding_surface_source": "direct_execution_binding",
+          "governed_surface": "shared_execution",
+          "execution_surface_established": true,
+          "downstream_binding_surface_established": false,
+          "direct_binding_execution": true,
+          "consequence_surface_established": true,
+          "transport_binding_equivalent": null,
+          "propagation_targets": [],
+          "binding_moments": [],
+          "blast_radius": "local",
+          "dependency_chain_depth": 0
+        },
+        "consequence_invariant": {
+          "invariant": "CONSEQUENCE_SURFACE_INVARIANT",
+          "rule": "Admissibility is governed against the represented downstream binding consequence, not merely the transport surface. An unestablished downstream consequence surface cannot inherit a lower-risk transport classification.",
+          "transport_surface": null,
+          "binding_surface": "shared_execution",
+          "binding_surface_source": "direct_execution_binding",
+          "governed_surface": "shared_execution",
+          "execution_surface_established": true,
+          "downstream_binding_surface_established": false,
+          "direct_binding_execution": true,
+          "downstream_consequence_declared": false,
+          "consequence_profile_present": true,
+          "consequence_surface_established": true,
+          "unestablished_reason": null,
+          "invariant_status": "ENFORCED",
+          "surface_status": "ESTABLISHED",
+          "satisfied": true
+        },
+        "boundary_signals": [],
+        "boundary": {
+          "crossing_detected": false,
+          "requires_revalidation": false,
+          "requires_operator_review": false,
+          "operator_review_required": false,
+          "operator_review_satisfied": null,
+          "requires_additional_operator_review": false,
+          "should_block_execution": false
+        },
+        "artifact_hash": "18d7e9b00c8084a9986f49ed2cdb1e2eb9c178395c100e9c34d5c22dfebc6eac"
+      },
+      "runtime_admissibility": {
+        "primitive": "runtime_admissibility",
+        "service": "runtime-admissibility-core",
+        "version": "1.9.1-v41-current-state-crossing-fix",
+        "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+        "evaluated_at": "2026-10-05T19:43:38.833Z",
+        "outcome": "ADMISSIBLE",
+        "admissible": true,
+        "action": "allow",
+        "failed_primitives": [],
+        "admissibility_signals": [
+          {
+            "primitive": "obligation",
+            "code": "obligation_not_applicable",
+            "severity": "info",
+            "source_class": "explicit_structured_witness",
+            "independently_verified": false,
+            "message": "The supplied structured obligation witness explicitly establishes that no obligation applies to the represented execution transaction."
+          }
+        ],
+        "continuity_state": {
+          "life_safety_context": false,
+          "emergency_continuity_defined": false,
+          "primary_authority_available": null,
+          "successor_authority_available": null,
+          "escalation_available": null,
+          "operator_review_confirmed": true,
+          "explicit_emergency_activation": false,
+          "critical_context": false,
+          "authority_resolution": {
+            "resolution": "operator_review_confirmed",
+            "mode": "review_confirmed",
+            "target": "federated-execution-agent",
+            "primary_authority": "federated-execution-agent",
+            "successor_authority": "institutional-execution-authority",
+            "emergency_authority": null,
+            "chain_available_successor": {
+              "index": 1,
+              "actor": "institutional-execution-authority"
+            }
+          }
+        },
+        "decision_reason": "All required governance primitives satisfied minimum admissibility conditions.",
+        "boundary": {
+          "evaluates": "whether live runtime legitimacy survives across state, authority, obligation, consequence, primitive outcomes, escalation availability, authority succession, and explicit emergency continuity paths",
+          "does_not_evaluate": "domain expertise, human legal judgment, clinical judgment, or final organizational accountability"
+        },
+        "artifact_hash": "28e76d914c4cdc62b7ff67cf0a18e83d214cccfcd5aa1abd2ae66667347fd827"
+      }
+    },
+    "execution_boundary": {
+      "should_execute": true,
+      "requires_constraint": false,
+      "requires_escalation": false,
+      "escalation_action": null,
+      "escalation_target": null,
+      "requires_emergency_continuity": false,
+      "emergency_continuity_active": false,
+      "emergency_authority": null,
+      "should_block_execution": false,
+      "reason": "All required governance primitives satisfied minimum admissibility conditions."
+    },
+    "response_binding": {
+      "service": "governed-execution-binding",
+      "version": "1.3.1-v41-governance-visibility",
+      "mode": "EXECUTION_ALLOWED",
+      "final_decision": "ALLOW",
+      "decision_label": "Allow",
+      "response_binding_enforced": true,
+      "binding_scope": "governed_response_contract_only",
+      "downstream_execution_enforced": false,
+      "binding_enforced": true,
+      "response_must_match_execution_boundary": true,
+      "required_response_stance": "may_authorize_execution",
+      "execution_action": "allow",
+      "runtime_action": "allow",
+      "should_execute": true,
+      "requires_constraint": false,
+      "requires_escalation": false,
+      "escalation_action": null,
+      "escalation_target": null,
+      "requires_emergency_continuity": false,
+      "should_block_execution": false,
+      "execution_status": null,
+      "operator_guidance": [],
+      "continuation_rule": null,
+      "replay_required": false,
+      "evidence_required": false,
+      "constitutional_snapshot_required": false,
+      "constitutional_receipt_required": false,
+      "allowed_response_intents": [
+        "authorize_evaluated_execution",
+        "explain_governance_state",
+        "preserve_audit_context"
+      ],
+      "prohibited_response_intents": [
+        "authorize_out_of_scope_execution"
+      ],
+      "binding_instruction": "Governance Decision: Allow.\n\nExecution may proceed under the evaluated governance state.\n\nRequired stance: lead with ALLOW, explain why execution is admissible under the evaluated governance state, and preserve audit context. Do not broaden authorization beyond the evaluated packet.\n\nGovernance reason: All required governance primitives satisfied minimum admissibility conditions.",
+      "proposed_response_review": {
+        "supplied": false,
+        "compliant": true,
+        "violations": [],
+        "reviewed_text_hash": null
+      },
+      "artifact_hash": "c78769d692231ac5e6cf7724a002d65e6ef50a4356f7af52b94eb444a37687da"
+    },
+    "governed_response": "Governance Decision: Allow.\n\nExecution may proceed under the evaluated governance state.\n\nRequired stance: lead with ALLOW, explain why execution is admissible under the evaluated governance state, and preserve audit context. Do not broaden authorization beyond the evaluated packet.\n\nGovernance reason: All required governance primitives satisfied minimum admissibility conditions.",
+    "artifact_hash": "b1486d0110cd965c8a56cc30e5ad505c43663775c7ba9f978de08cacdf1b0422",
+    "unified_transaction": {
+      "api_version": "v4-single-call",
+      "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+      "evidence_bearing": true,
+      "determination": "PERMITTED",
+      "admissible": true,
+      "action": "allow",
+      "determination_reason": "All required governance primitives satisfied minimum admissibility conditions.",
+      "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+      "determination_hash": "050893b3a384f523d44477923f1ad9c751f2e9d909e9866823a576ad15e3726a",
+      "receipt_id": "CR-b0ea215a-826c-4ed8-92ad-a5e12b8c2591",
+      "receipt_hash": "6a0b264fa9982182142ab39103600256689dbef3f7be1fc0ae84c27bdefee5e8",
+      "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060",
+      "determination_currency": "CURRENT_AS_RECORDED",
+      "replay_status": "NOT_EXERCISED",
+      "transaction_digest": "e34a1f1d7e87e54c3ca7918d5293750987d36f06d508be99306acc1c0fb5a97c",
+      "secure_execution": null
+    },
+    "constitutional_transaction": {
+      "contract": "single_api_call",
+      "api_version": "v4-single-call",
+      "transaction_model_version": "4.1.0",
+      "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+      "evidence_bearing": true,
+      "present_state": {
+        "binding_version": "4.1.0",
+        "state_hash": "1f6505faa0eced1cf5aed05355976edfe67b4f712e7979e5f9b1085649dfbb9b",
+        "snapshot_id": "b907894d-2e26-4e0f-ac0f-6e05da58fd2a",
+        "established_at": "2026-10-05T19:15:00.000Z",
+        "attributable_source": "federation-domain-pack@1.2.0-v118",
+        "epistemic_status": "ESTABLISHED",
+        "source_evidence_refs": [
+          "institutional-authority-registry#AUTH-REG-118-001",
+          "institutional-charter-registry#v118-case-a-issuer-standing",
+          "registry-issuer-standing-rule@1",
+          "rule-r1@1",
+          "federation-domain-pack@1.2.0-v118"
+        ],
+        "derivation_ref": null,
+        "derivation_method": null,
+        "derivation_hash": null,
+        "reconstruction_boundary": "Upstream cognition establishes the attributable present-state representation; Harmonic evaluates admissibility against the supplied state and does not independently infer domain state.",
+        "reconstructability": {
+          "state_bound": true,
+          "attributable_source_present": true,
+          "evidence_lineage_present": true,
+          "epistemic_status_explicit": true,
+          "overall": "reconstructable"
+        },
+        "non_claims": [
+          "Present-state binding does not prove the independent truth or completeness of the supplied domain state.",
+          "Harmonic does not infer clinical, legal, financial, or other domain state merely from raw observations."
+        ],
+        "present_state_binding_hash": "7307c6c0877a601169725f287f576cf3bd16f97a6994fa89b6e292320fead261"
+      },
+      "determination": {
+        "outcome": "PERMITTED",
+        "admissible": true,
+        "action": "allow",
+        "reason": "All required governance primitives satisfied minimum admissibility conditions.",
+        "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+        "determination_hash": "050893b3a384f523d44477923f1ad9c751f2e9d909e9866823a576ad15e3726a"
+      },
+      "dependencies": {
+        "manifest": {
+          "dependency_model_version": "4.1.0",
+          "derivation_version": "runtime_materiality/v3-causal-provenance",
+          "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+          "dependencies": {
+            "authority": [],
+            "obligations": [
+              "v118-examination:no-separate-obligation"
+            ],
+            "evidence": [
+              "execution-region-registry-a#execution_region",
+              "institutional-authority-registry#AUTH-REG-118-001",
+              "institutional-charter-registry#v118-case-a-issuer-standing"
+            ],
+            "state": [
+              "1f6505faa0eced1cf5aed05355976edfe67b4f712e7979e5f9b1085649dfbb9b"
+            ],
+            "continuity": []
+          },
+          "derived_constitutional_dependencies": {
+            "derivation": "runtime_materiality/v3-causal-provenance",
+            "controlling_primitives": [
+              {
+                "primitive": "authority_continuity",
+                "role": "SUPPORTING_ADMISSIBILITY",
+                "outcome": "AUTHORITY_CONTINUOUS",
+                "admissible": true,
+                "version": "1.9.1-v41-provenance-freshness-witness",
+                "artifact_hash": "9e2108e52b691c00018c1c37c766c953a57344044d2c4c7e4a231d48703411e3"
+              },
+              {
+                "primitive": "consequence_boundary",
+                "role": "SUPPORTING_ADMISSIBILITY",
+                "outcome": "BOUNDARY_LOW",
+                "admissible": true,
+                "version": "1.10.4-v41-current-state-crossing-fix",
+                "artifact_hash": "18d7e9b00c8084a9986f49ed2cdb1e2eb9c178395c100e9c34d5c22dfebc6eac"
+              },
+              {
+                "primitive": "obligation_continuity",
+                "role": "EVALUATED_CONTEXTUAL_PRIMITIVE",
+                "outcome": "NOT_APPLICABLE",
+                "admissible": true,
+                "version": "1.1.2-v41-explicit-violation-preservation",
+                "artifact_hash": "96eff9d3968af1f71d3c8605260dbc75308261edeb0615293a3d0b213b10b706"
+              },
+              {
+                "primitive": "reality_contact",
+                "role": "SUPPORTING_ADMISSIBILITY",
+                "outcome": "CONTACT_CONFIRMED",
+                "admissible": true,
+                "version": "1.15.0-v41-epistemic-provenance",
+                "artifact_hash": "71a8cfc3868cb0abad9baacce4c6af7d781db4d996b446526d198a2f5e66521b"
+              },
+              {
+                "primitive": "runtime_admissibility",
+                "role": "RUNTIME_SYNTHESIS",
+                "outcome": "ADMISSIBLE",
+                "admissible": true,
+                "version": "1.9.1-v41-current-state-crossing-fix",
+                "artifact_hash": "28e76d914c4cdc62b7ff67cf0a18e83d214cccfcd5aa1abd2ae66667347fd827"
+              },
+              {
+                "primitive": "understanding_continuity",
+                "role": "SUPPORTING_ADMISSIBILITY",
+                "outcome": "UNDERSTANDING_CURRENT",
+                "admissible": true,
+                "version": "1.2.0-v41-epistemic-absence",
+                "artifact_hash": "bcb429ccc86ec6ed2fad7a5cbe323532d628282f52091542d3f2d05566803b7d"
+              }
+            ],
+            "controlling_signals": [],
+            "contextual_signals": [
+              {
+                "index": 0,
+                "primitive": "obligation",
+                "code": "obligation_not_applicable",
+                "severity": "info",
+                "source_class": "explicit_structured_witness",
+                "independently_verified": false,
+                "target_authority": null,
+                "reason": null
+              }
+            ],
+            "material_evidence": [
+              {
+                "ref": "execution-region-registry-a#execution_region",
+                "role": "PRESENT_STATE_OBSERVATION",
+                "source": "observed_reality",
+                "statement": "Source A reports execution_region = EU-WEST."
+              },
+              {
+                "ref": "institutional-authority-registry#AUTH-REG-118-001",
+                "role": "PRESENT_STATE_OBSERVATION",
+                "source": "observed_reality",
+                "statement": "The authority-registry record remains current, signed, attributable, internally valid and unchanged across the frozen pair."
+              },
+              {
+                "ref": "institutional-charter-registry#v118-case-a-issuer-standing",
+                "role": "PRESENT_STATE_OBSERVATION",
+                "source": "observed_reality",
+                "statement": "Independent charter evidence reports issuer standing as GOVERNING for execution_region_for_shared_execution at 2026-10-05T19:15:00.000Z."
+              }
+            ],
+            "runtime_outcome": "PERMITTED",
+            "runtime_admissible": true,
+            "runtime_action": "allow",
+            "non_claims": [
+              "Derived constitutional dependencies preserve the primitive artifacts and runtime signals that materially controlled the recorded determination; they do not independently establish domain truth.",
+              "A dependency record is constitutional provenance, not a claim that every passing primitive was necessary for every counterfactual outcome."
+            ],
+            "derived_dependency_hash": "3886a85d9a3d77e2fb7d0915289ee6505fb22ba377a39d672552c1233e1d81f3"
+          },
+          "dependency_counts": {
+            "authority": 0,
+            "obligations": 1,
+            "evidence": 3,
+            "state": 1,
+            "continuity": 0,
+            "controlling_primitives": 6,
+            "controlling_signals": 0,
+            "contextual_signals": 1,
+            "material_evidence": 3
+          },
+          "declaration_status": "DECLARED_AND_RUNTIME_DERIVED",
+          "semantic_rule": "Historical determination content remains immutable. A material dependency change can make the determination no longer current without making the historical determination incorrect.",
+          "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060"
+        },
+        "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060"
+      },
+      "currency": {
+        "currency_model_version": "4.1.0",
+        "determination_id": "CD-4e34f5e6-0317-4f1d-887a-ba353ba274c6",
+        "dependency_root": "a2bb79048d067acfc43774399a0e9784f1fcee43b6974d8d0592f7e5ee95e060",
+        "status": "CURRENT_AS_RECORDED",
+        "effective_at": "2026-10-05T19:43:38.833Z",
+        "basis": "The determination is current only with respect to the dependency state captured at evaluation time. Future dependency changes require a new currency observation or re-evaluation.",
+        "historical_determination_mutated": false,
+        "currency_hash": "e05cd6583f34528234fdf26b146d81f264cc2887ace8848e6bfe45713618bd3d"
+      },
+      "execution": {
+        "boundary": {
+          "should_execute": true,
+          "requires_constraint": false,
+          "requires_escalation": false,
+          "escalation_action": null,
+          "escalation_target": null,
+          "requires_emergency_continuity": false,
+          "emergency_continuity_active": false,
+          "emergency_authority": null,
+          "should_block_execution": false,
+          "reason": "All required governance primitives satisfied minimum admissibility conditions."
+        },
+        "status": "NOT_EXECUTED_BY_HARMONIC",
+        "downstream_execution_enforced": false
+      },
+      "receipt": {
+        "receipt_id": "CR-b0ea215a-826c-4ed8-92ad-a5e12b8c2591",
+        "receipt_hash": "6a0b264fa9982182142ab39103600256689dbef3f7be1fc0ae84c27bdefee5e8"
+      },
+      "replay": {
+        "status": "NOT_EXERCISED",
+        "range_binding": null
+      },
+      "integrity": {
+        "transaction_digest": "e34a1f1d7e87e54c3ca7918d5293750987d36f06d508be99306acc1c0fb5a97c",
+        "transaction_digest_scope": "canonical_determination_state_dependencies_and_execution_boundary",
+        "projection_digest": null,
+        "projection_integrity": "NOT_EXERCISED"
+      },
+      "non_claims": [
+        "The initial universal evaluation does not claim that replay has been exercised.",
+        "Unless Secure Execution reports executed=true, this transaction does not claim that a downstream executor acted or that an outcome occurred.",
+        "Projection verification is a later evidentiary operation and is not silently treated as PASS at transaction creation."
+      ]
+    },
+    "harness_request_witness": {
+      "adapter_build": "v107-playground-witness-integrity-2026-08-28",
+      "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+      "prompt_present": false,
+      "scenario_prompt_present": false,
+      "scenario_label": null,
+      "methodology": {
+        "version": "v107-playground-witness-integrity-2026-08-28",
+        "hash": "4a61c1a39f64da68a418f4c8cd7a37ef0dc9b47acb21742b0d57b1e1b6a69f1b",
+        "mode": "exact_packet_replay",
+        "disposition_authority": "harmonic",
+        "harness_derived_fields": [],
+        "harness_inference_enabled": false,
+        "freshness_stamped_by_harness": false,
+        "whole_prompt_promoted_to_current_reality": false
+      },
+      "canonical_packet": {
+        "sha256": "f9669895354294c08110070a23fa42fdd11a60c070016ba9e63686618ff5bb04",
+        "canonical_bytes": 5777,
+        "export": {
+          "requested_action": {
+            "type": "shared_execution",
+            "scope": [
+              "federated_shared_consequence"
+            ],
+            "reversibility": "reversible"
+          },
+          "understanding_state": {
+            "current": true,
+            "complete": true,
+            "provenance_preserved": true,
+            "applicable": true,
+            "confidence": 1,
+            "source_ids": [
+              "execution-region-registry-a",
+              "execution-region-registry-b",
+              "institutional-authority-registry",
+              "institutional-charter-registry",
+              "registry-issuer-standing-rule@1",
+              "rule-r1@1",
+              "federation-domain-pack@1.2.0-v118"
+            ],
+            "unresolved_tensions": [],
+            "missing_information": [],
+            "revision_status": "current"
+          },
+          "declared_reality": {
+            "current_state_claims": [
+              "The authority-registry statement content, signature, provenance and record status are identical across the frozen pair.",
+              "Registry content validity and registry/issuer standing are separate frozen variables.",
+              "The registry statement may not establish its own issuer standing."
+            ],
+            "last_verified_at": "2026-10-05T19:15:00.000Z"
+          },
+          "relational_rule": {
+            "rule_id": "rule-r1",
+            "version": "1",
+            "constituted_at": "T0",
+            "scope": [
+              "federated_shared_consequence"
+            ],
+            "expression": "currently_governing_source.execution_region MUST_EQUAL consequence.required_execution_region for shared_execution",
+            "source": "federation-constitution-r1"
+          },
+          "governing_basis": {
+            "constituted_at": "T0",
+            "domain_rule_ref": "rule-r1@1",
+            "issuer_standing_rule_ref": "registry-issuer-standing-rule@1",
+            "transition_vocabulary_contract": "Harmonic V3_8 state_transition relationship vocabulary",
+            "case_specific_constitutional_answer_supplied": false
+          },
+          "authority_chain": {
+            "subject": "federated-execution-agent",
+            "issuer": "institutional-execution-authority",
+            "scope": [
+              "federated_shared_consequence"
+            ],
+            "last_verified_at": "2026-10-05T19:15:00.000Z",
+            "chain": [
+              {
+                "actor": "federated-execution-agent",
+                "status": "active"
+              },
+              {
+                "actor": "institutional-execution-authority",
+                "status": "active"
+              }
+            ]
+          },
+          "revocation_state": {
+            "last_revocation_check_at": "2026-10-05T19:15:00.000Z",
+            "known_revocations": []
+          },
+          "obligation_witness": {
+            "detected": true,
+            "status": "not_applicable",
+            "source": "v118-examination:no-separate-obligation",
+            "evidence_refs": [
+              "v118-examination:no-separate-obligation"
+            ]
+          },
+          "consequence_profile": {
+            "level": "low",
+            "reversibility": "reversible",
+            "execution_surface": "shared_execution",
+            "blast_radius": "local"
+          },
+          "safeguards": {
+            "operator_review_confirmed": true
+          },
+          "packet_id": "V118-REGISTRY-AUTHORITY-A-001",
+          "observed_reality": {
+            "signals": [
+              {
+                "statement": "Source A reports execution_region = EU-WEST.",
+                "source": "execution-region-registry-a",
+                "evidence_ref": "execution-region-registry-a#execution_region"
+              },
+              {
+                "statement": "The authority-registry record remains current, signed, attributable, internally valid and unchanged across the frozen pair.",
+                "source": "institutional-authority-registry",
+                "evidence_ref": "institutional-authority-registry#AUTH-REG-118-001"
+              },
+              {
+                "statement": "Independent charter evidence reports issuer standing as GOVERNING for execution_region_for_shared_execution at 2026-10-05T19:15:00.000Z.",
+                "source": "institutional-charter-registry",
+                "evidence_ref": "institutional-charter-registry#v118-case-a-issuer-standing"
+              }
+            ]
+          },
+          "present_state_provenance": {
+            "attributable_source": "federation-domain-pack@1.2.0-v118",
+            "established_at": "2026-10-05T19:15:00.000Z",
+            "epistemic_status": "ESTABLISHED",
+            "evidence_refs": [
+              "institutional-authority-registry#AUTH-REG-118-001",
+              "institutional-charter-registry#v118-case-a-issuer-standing",
+              "registry-issuer-standing-rule@1",
+              "rule-r1@1",
+              "federation-domain-pack@1.2.0-v118"
+            ]
+          },
+          "state_transition": {
+            "prior_state_ref": "V118-T0-REGISTRY-ISSUER-GOVERNING",
+            "new_observation_refs": [
+              "institutional-authority-registry#AUTH-REG-118-001",
+              "institutional-charter-registry#v118-case-a-issuer-standing"
+            ],
+            "relationship": "consistent_with_prior_state",
+            "attributable_source": "federation-domain-pack@1.2.0-v118",
+            "observed_at": "2026-10-05T19:15:00.000Z",
+            "scope": [
+              "federated_shared_consequence"
+            ]
+          },
+          "specialty_pack_evidence": {
+            "specialty_pack": "federation-domain-pack@1.2.0-v118",
+            "constitution_status": "CONSTITUTED",
+            "proposition_id": "execution_region_for_shared_execution",
+            "proposition_value": "EU-WEST",
+            "governing_source_id": "execution-region-registry-a",
+            "authority_registry_record_id": "AUTH-REG-118-001",
+            "registry_statement_content_valid": true,
+            "registry_issuer_id": "institutional-source-governance-office",
+            "registry_issuer_standing": "GOVERNING",
+            "registry_issuer_standing_basis_ref": "institutional-charter#source-governance-office-v1",
+            "registry_issuer_authority_effective_interval": {
+              "from": "2026-01-01T00:00:00.000Z",
+              "until": "2026-10-05T20:00:00.000Z"
+            },
+            "issuer_standing_evidence_source": "institutional-charter-registry",
+            "anti_circularity_satisfied": true,
+            "relationship": "consistent",
+            "relationship_basis": "valid registry statement is empowered by independently standing issuer and selects Source A, whose value matches the frozen domain rule",
+            "domain_rule_ref": "rule-r1@1",
+            "scope": "federated_shared_consequence",
+            "constitutional_answer_supplied": false
+          }
+        }
+      },
+      "fixture_evidence": {
+        "reality_supplied": false,
+        "reality_source": "exact_packet_replay",
+        "declared_claim_count": 0,
+        "observed_signal_count": 0,
+        "consequence_profile_supplied": false,
+        "consequence_profile_source": "exact_packet_replay"
+      },
+      "model_response_binding": {
+        "role": "exact_packet_replay",
+        "used_as_observed_reality": false,
+        "response_supplied": false
+      },
+      "synthetic_fixture": {
+        "translated": false,
+        "source": null,
+        "fields": []
+      },
+      "requested_action": {
+        "present_in_packet": true,
+        "caller_supplied": true,
+        "provenance": "exact_packet_replay",
+        "type": "shared_execution",
+        "scope": [
+          "federated_shared_consequence"
+        ]
+      },
+      "authority_provenance": {
+        "supplied": false,
+        "source": "not_supplied",
+        "authority_history_event_count": 0,
+        "original_authority_supplied": false,
+        "authority_change_supplied": false,
+        "current_authority_supplied": false
+      },
+      "obligation": {
+        "supplied": true,
+        "kind": null,
+        "status": "not_applicable",
+        "waiver_or_exception_active": null,
+        "source": "v118-examination:no-separate-obligation"
+      },
+      "state_provenance": {
+        "supplied": true,
+        "source": "exact_packet_replay",
+        "attributable_source": "federation-domain-pack@1.2.0-v118",
+        "epistemic_status": "ESTABLISHED",
+        "fixture_epistemic_status": null,
+        "evidence_ref_count": 5
+      },
+      "downstream_accountability": {
+        "supplied": false,
+        "enforcement_layer_supplied": false,
+        "next_decision_owner_supplied": false,
+        "consequence_owner_supplied": false
+      },
+      "continuity": {
+        "life_safety_context": null,
+        "primary_authority_available": null,
+        "emergency_continuity_defined": null,
+        "explicit_emergency_activation": null,
+        "emergency_authority_available": null,
+        "emergency_authority": null
+      },
+      "mode": "exact_packet_replay",
+      "exact_packet_replay": true,
+      "semantic_translation_performed": false,
+      "llm_involved_in_packet_construction": false,
+      "outbound_sha256": "f9669895354294c08110070a23fa42fdd11a60c070016ba9e63686618ff5bb04",
+      "outbound_bytes": 5777,
+      "transport_rule": "The operator-supplied JSON body was forwarded to /api/evaluate without semantic translation."
+    }
+  }
+}
