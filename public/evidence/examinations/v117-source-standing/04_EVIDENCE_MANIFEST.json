@@ -1,0 +1,46 @@
+{
+  "package": "V117_Wojciech_Full_Evidence_Package",
+  "examination_id": "V117-SOURCE-STANDING-001",
+  "red_team_id": "RED TEAM 002",
+  "disposition": "PASS — BOUNDED",
+  "frozen_proposition": "A Specialty Pack must distinguish source freshness and source continuity from current source standing.",
+  "falsifier": "Can an unchanged, fresh, attributable source become non-governing without becoming stale, wrong, or unavailable — and does the Pack notice?",
+  "case_a": {
+    "scenario": "V117-SOURCE-STANDING-A-001",
+    "generated_at": "2026-10-05T18:53:46.209Z",
+    "raw_export_sha256": "ba01a8fe0c1263f6fb4110d60e20603c10c1b5a06a4338917131f7b05708cd00",
+    "canonical_outbound_packet_sha256": "be5c3cb32996434ef072c794453fd99bf7f5fb0cc3f492faa68e5eae199cb92c",
+    "pack_value": "EU-WEST",
+    "governing_source": "execution-region-registry-a",
+    "relationship": "consistent_with_prior_state",
+    "harmonic_outcome": "PERMITTED",
+    "harmonic_admissible": true,
+    "harmonic_action": "allow"
+  },
+  "case_b": {
+    "scenario": "V117-SOURCE-STANDING-B-001",
+    "generated_at": "2026-10-05T18:54:04.284Z",
+    "raw_export_sha256": "726f8b05103ddae2ce29cc0dcc3e7defe58801a4d4373c189cedef74ff01618a",
+    "canonical_outbound_packet_sha256": "df72436cd6551bb2bd2cd4c2177542ab6674a5dc3c000866acc44ed01ebadf3d",
+    "pack_value": "US-EAST",
+    "governing_source": "execution-region-registry-b",
+    "relationship": "material_contradiction",
+    "harmonic_outcome": "REFUSED",
+    "harmonic_admissible": false,
+    "harmonic_action": "refuse",
+    "blocking_signal": "material_state_transition"
+  },
+  "source_implementation": {
+    "full_harness_zip_sha256": "d2707efcb591e31e67beb33d283d375a798b5e03c13a1da21f67d6d84c8ea7ad",
+    "full_files_delta_zip_sha256": "a6781ffcc6a6f1d1bfd8c62f3b5be42d1df212a64fd0d15df1df457f568cd880",
+    "freeze_sha256": "a5c11697a0e3429c4dd6e52e3a40790e11670ded74b90014dae46cd90ef71169",
+    "responsibility_map_sha256": "93e07ff5c4db326478de9c759416bd2341ecc5ae4712445bf2ef3257d30d87db"
+  },
+  "claim_ceiling": [
+    "bounded to this frozen source map, source-selection rule, synthetic records, Pack implementation, and Harmonic interface",
+    "does not establish independent truth or legitimacy of the source-authority registry",
+    "does not establish universal source-standing correctness",
+    "does not establish downstream physical execution or universal non-bypassability",
+    "Harmonic replay is downstream witness evidence and does not rescue an incorrect Pack constitution"
+  ]
+}
