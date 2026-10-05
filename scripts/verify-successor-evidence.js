@@ -3,7 +3,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
-for (const slug of ['v113-complete-information-successor', 'v114-execution-boundary']) {
+for (const slug of ['v113-complete-information-successor', 'v114-execution-boundary', 'v116-pack-boundary-invariance']) {
   const dir = `evidence/examinations/${slug}`;
   const entries = fs.readFileSync(path.join(root, dir, 'SHA256SUMS.txt'), 'utf8').trim().split('\n');
   const names = [];
@@ -20,11 +20,11 @@ for (const slug of ['v113-complete-information-successor', 'v114-execution-bound
     assert.ok(fs.readFileSync(path.join(root, dir, name)).equals(fs.readFileSync(path.join(root, 'public', dir, name))), `mirror mismatch: ${slug}/${name}`);
   }
 }
-for (const name of ['index.html', 'docs.html', 'v113-complete-information-successor.html', 'v114-execution-boundary.html']) {
+for (const name of ['index.html', 'docs.html', 'v113-complete-information-successor.html', 'v114-execution-boundary.html', 'v116-pack-boundary-invariance.html']) {
   const bytes = fs.readFileSync(path.join(root, name));
   assert.ok(bytes.equals(fs.readFileSync(path.join(root, 'public', name))), `page mirror mismatch: ${name}`);
   for (const [, href] of bytes.toString().matchAll(/href="(\/[^"#?]*)"/g)) {
     if (href !== '/') assert.ok(fs.existsSync(path.join(root, href.slice(1))), `missing local link: ${href}`);
   }
 }
-console.log('PASS: V113/V114 published checksums, complete manifests, mirrored files, and local page links');
+console.log('PASS: V113/V114/V116 published checksums, complete manifests, mirrored files, and local page links');
