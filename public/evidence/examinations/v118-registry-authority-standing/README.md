@@ -1,6 +1,6 @@
 # V118 — Registry Content Validity vs Registry / Issuer Authority Standing
 
-**Status:** PASS — BOUNDED · recorded result; independent examiner acceptance pending publication update.
+**Status:** PASS — BOUNDED · independently accepted as run by Wojciech Z. Kaleta, PhD.
 
 ## Frozen proposition
 
@@ -14,7 +14,7 @@ Case A used a valid registry statement backed by a currently standing issuer. Ca
 
 > Given independently supplied issuer-standing evidence, the examined Specialty Pack distinguished registry-content validity from the current standing of the authority empowering that registry statement, and refused to treat the still-valid statement as governing after issuer standing ended.
 
-Independent examiner acceptance is not yet attached in this repository snapshot. This record preserves the run result and its claim ceiling without anticipating the examiner.
+Wojciech Z. Kaleta, PhD inspected the frozen V118 record and accepted **PASS — BOUNDED** as run. No repair was requested; no broader claim was earned.
 
 ## Claim ceiling
 
@@ -30,6 +30,7 @@ V118 does not establish the ultimate legitimacy or truth of the charter / issuer
 - `04_EVIDENCE_MANIFEST.json` — evidence manifest.
 - `05_PRE_RUN_INTEGRITY_REPAIR.md` — preserved pre-run packet-integrity rejection and repair.
 - `06_PROVENANCE_AND_FREEZE_NOTE.md` — provenance and freeze chronology.
+- `07_WOJCIECH_ACCEPTANCE.md` — independent acceptance of the bounded result.
 - `V118_Wojciech_Full_Evidence_Package.zip` — complete evidence package.
 - `SHA256SUMS.txt` — checksums for this published directory.
 
