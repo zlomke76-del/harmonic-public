@@ -1,3 +1,11 @@
+## 2026-10-06 — V121 / V122 preserved successor evidence
+
+- Added V121 / RED TEAM 005 — PASS, BOUNDED, independently accepted as run.
+- Added V122 / RED TEAM 006 — PASS, BOUNDED, independently accepted as run.
+- Preserved exact bounded ceilings: Harmonic remains downstream witness evidence only for the scoped fracture and precedence conflict.
+- Added evidence pages, direct acceptance records, full evidence packages, and public inspection paths.
+- No public reference evaluator behavior changed.
+
 ## 4.0.0-public.2 — V118 acceptance + V120 RED TEAM 004 evidence
 
 - Updated V118 to record Wojciech Z. Kaleta, PhD acceptance: **PASS — BOUNDED. Accepted as run.**
