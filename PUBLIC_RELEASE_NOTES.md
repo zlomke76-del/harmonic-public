@@ -1,3 +1,12 @@
+## 4.0.0-public.2 — V118 acceptance + V120 RED TEAM 004 evidence
+
+- Updated V118 to record Wojciech Z. Kaleta, PhD acceptance: **PASS — BOUNDED. Accepted as run.**
+- Added V120 / RED TEAM 004: **Valid authority artifact ≠ currently intact authority chain.**
+- V120 is **PASS — BOUNDED, independently accepted as run**.
+- Preserved the explicit V120 ceiling: Harmonic's `authority_continuity` primitive remains `AUTHORITY_CONTINUOUS` in Case B, so the result does not establish independent Harmonic chain reconstruction.
+- Added standalone V120 evidence page and preserved evidence directory/package.
+- No public runtime behavior is modified by this evidence update.
+
 # Public Release Notes
 
 ## 4.0.0-public.1 — contract and evidence alignment
