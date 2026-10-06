@@ -1,0 +1,39 @@
+{
+  "examination_id": "V120-AUTHORITY-CHAIN-CONTINUITY-001",
+  "red_team_id": "RED TEAM 004",
+  "date": "2026-10-06",
+  "status": "PASS_BOUNDED_INDEPENDENTLY_ACCEPTED",
+  "frozen_proposition": "A Specialty Pack must distinguish the continued validity of an intermediate authority artifact from the continued standing of the authority path that empowers it.",
+  "frozen_distinction": "Valid authority artifact != currently intact authority chain.",
+  "frozen_chain": "R0 -> B -> C -> Source A",
+  "case_a": {
+    "pack_constitution_status": "CONSTITUTED",
+    "authority_chain_status": "INTACT",
+    "proposition_value": "EU-WEST",
+    "governing_source_id": "execution-region-registry-a",
+    "harmonic_outcome": "PERMITTED",
+    "harmonic_action": "allow"
+  },
+  "case_b": {
+    "pack_constitution_status": "UNRESOLVED_AUTHORITY_CHAIN",
+    "authority_chain_status": "BROKEN_UPSTREAM_EMPOWERMENT",
+    "proposition_value": null,
+    "governing_source_id": null,
+    "harmonic_outcome": "REFUSED",
+    "harmonic_action": "refuse",
+    "harmonic_authority_continuity_primitive": "AUTHORITY_CONTINUOUS"
+  },
+  "examiner": {
+    "name": "Wojciech Z. Kaleta, PhD",
+    "disposition": "PASS — BOUNDED. Accepted as run.",
+    "date": "2026-10-06",
+    "package_sha256": "89a827421bb9fcac6730870746301f4279dad60e8194bbd2472bfd2b89d9ef78"
+  },
+  "claim_ceiling": [
+    "Does not establish external truth or legitimacy of R0.",
+    "Does not establish universal recursive authority closure or universal institutional legitimacy.",
+    "Does not establish that Harmonic independently reconstructs the R0->B->C authority-chain break.",
+    "Does not establish downstream physical execution."
+  ],
+  "harmonic_boundary": "Harmonic is downstream witness evidence only. PASS is earned at the Specialty Pack authority-chain admission boundary."
+}
