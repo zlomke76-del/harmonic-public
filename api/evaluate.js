@@ -29,7 +29,9 @@ function readJsonBody(req) {
   });
 }
 
-const EVALUATOR_VERSION = process.env.HARMONIC_EVALUATOR_VERSION || "1.2-v11";
+const EVALUATOR_VERSION = process.env.HARMONIC_EVALUATOR_VERSION || "1.2-v12";
+const MAX_FUTURE_CLOCK_SKEW_MS = 5 * 60 * 1000;
+const REFERENCE_RECEIPT_TTL_MS = 30 * 1000;
 
 function header(req, name) {
   return req.headers?.[name] || req.headers?.[name.toLowerCase()] || null;
@@ -66,11 +68,27 @@ function collectStatements(packet, path) {
 function getFreshness(packet) {
   const lastVerifiedAt = packet?.truth?.last_verified_at || packet?.declared_state?.last_verified_at || packet?.state?.last_verified_at;
   const staleAfterMinutes = asNumber(packet?.truth?.stale_after_minutes || packet?.stabilization_policy?.stale_after_minutes, 0);
-  if (!lastVerifiedAt || staleAfterMinutes <= 0) return { stale: false, age_minutes: null, stale_after_minutes: staleAfterMinutes || null };
+  const freshnessRequired = staleAfterMinutes > 0;
+
+  if (!freshnessRequired) {
+    return { stale: false, required: false, age_minutes: null, stale_after_minutes: null };
+  }
+  if (!lastVerifiedAt) {
+    return { stale: true, required: true, age_minutes: null, stale_after_minutes: staleAfterMinutes, missing_timestamp: true };
+  }
+
   const verifiedAtMs = new Date(lastVerifiedAt).getTime();
-  if (!Number.isFinite(verifiedAtMs)) return { stale: true, age_minutes: null, stale_after_minutes: staleAfterMinutes, invalid_timestamp: true };
-  const ageMinutes = Math.max(0, Math.round((Date.now() - verifiedAtMs) / 60000));
-  return { stale: ageMinutes > staleAfterMinutes, age_minutes: ageMinutes, stale_after_minutes: staleAfterMinutes };
+  if (!Number.isFinite(verifiedAtMs)) {
+    return { stale: true, required: true, age_minutes: null, stale_after_minutes: staleAfterMinutes, invalid_timestamp: true };
+  }
+
+  const now = Date.now();
+  if (verifiedAtMs - now > MAX_FUTURE_CLOCK_SKEW_MS) {
+    return { stale: true, required: true, age_minutes: null, stale_after_minutes: staleAfterMinutes, future_timestamp: true };
+  }
+
+  const ageMinutes = Math.max(0, Math.round((now - verifiedAtMs) / 60000));
+  return { stale: ageMinutes > staleAfterMinutes, required: true, age_minutes: ageMinutes, stale_after_minutes: staleAfterMinutes };
 }
 
 function detectContradiction(packet) {
@@ -108,12 +126,18 @@ function evaluateStability(packet) {
     score -= 28;
     findings.push({ axis: "truth", code: "missing_observed_evidence", severity: "warn", message: "No observations or evidence were supplied for reality coupling." });
   }
-  if (freshness.invalid_timestamp) {
-    score -= 18;
-    findings.push({ axis: "truth", code: "invalid_verification_timestamp", severity: "warn", message: "The verification timestamp could not be parsed." });
+  if (freshness.missing_timestamp) {
+    score -= 46;
+    findings.push({ axis: "truth", code: "missing_verification_timestamp", severity: "block", message: "Freshness is required but no verification timestamp was supplied." });
+  } else if (freshness.invalid_timestamp) {
+    score -= 46;
+    findings.push({ axis: "truth", code: "invalid_verification_timestamp", severity: "block", message: "The required verification timestamp could not be parsed." });
+  } else if (freshness.future_timestamp) {
+    score -= 46;
+    findings.push({ axis: "truth", code: "future_verification_timestamp", severity: "block", message: "The verification timestamp exceeds the permitted future clock-skew tolerance." });
   } else if (freshness.stale) {
-    score -= 24;
-    findings.push({ axis: "truth", code: "stale_truth_basis", severity: "warn", message: "Truth basis is older than the configured freshness window.", age_minutes: freshness.age_minutes, stale_after_minutes: freshness.stale_after_minutes });
+    score -= 46;
+    findings.push({ axis: "truth", code: "stale_truth_basis", severity: "block", message: "Truth basis is older than the configured freshness window.", age_minutes: freshness.age_minutes, stale_after_minutes: freshness.stale_after_minutes });
   }
   if (contradiction) {
     score -= 46;
@@ -229,6 +253,21 @@ function detectAuthorityRisk(packet) {
   };
 }
 
+function evaluateAuthorityStanding(packet) {
+  const risk = detectAuthorityRisk(packet);
+  const findings = [];
+  if (risk.revoked) {
+    findings.push({ axis: "authority", code: "authority_revoked", severity: "block", message: "The represented authority is revoked." });
+  }
+  if (risk.expired) {
+    findings.push({ axis: "authority", code: "authority_expired", severity: "block", message: "The represented authority is expired." });
+  }
+  if (risk.scope_mismatch) {
+    findings.push({ axis: "authority", code: "authority_scope_mismatch", severity: "block", message: "The requested scope is outside the represented authority scope." });
+  }
+  return { risk, findings };
+}
+
 function analyzeContinuityState(packet, findings, axisScores, aggregateScore, decision) {
   const authorityRisk = detectAuthorityRisk(packet);
   const continuation = packet?.continuity || packet?.runtime_continuity || {};
@@ -310,7 +349,8 @@ function evaluateHarmonicStabilizer(packet) {
   const truth = evaluateStability(packet);
   const compassion = evaluateContinuation(packet);
   const accountability = evaluateConstraint(packet);
-  const findings = [...truth.findings, ...compassion.findings, ...accountability.findings];
+  const authorityStanding = evaluateAuthorityStanding(packet);
+  const findings = [...truth.findings, ...compassion.findings, ...accountability.findings, ...authorityStanding.findings];
   const axis_scores = {
     truth: truth.score,
     compassion: compassion.score,
@@ -339,6 +379,16 @@ function evaluateHarmonicStabilizer(packet) {
       evaluates: "pre-execution operational stability and escalation conditions",
       does_not_evaluate: "domain judgment, autonomous authorization, or unrestricted execution approval",
     },
+  };
+
+  const request_hash = sha256(stableStringify(packet));
+  const operation = packet?.execution_request || packet?.requested_action || null;
+  const operation_hash = sha256(stableStringify(operation));
+  result.reference_binding = {
+    request_hash,
+    operation_hash,
+    valid_until: new Date(Date.now() + REFERENCE_RECEIPT_TTL_MS).toISOString(),
+    authentication: "public-reference-only; production verification requires an authenticated receipt adapter",
   };
 
   const publicResult = { ...result, artifact_hash: sha256(stableStringify({ packet, result })) };
