@@ -1,6 +1,6 @@
 {
   "name": "harmonic-stabilizer-core",
-  "version": "4.0.0-public.1",
+  "version": "4.0.0-public.3",
   "private": false,
   "description": "Public Harmonic v4 architecture contract, public-safe reference evaluator, SDK examples, and frozen evidence archive. Sovereign production runtime implementation excluded.",
   "scripts": {
@@ -10,7 +10,8 @@
     "verify:public-boundary": "node scripts/verify-public-boundary.js",
     "example:raw-vs-governed": "node examples/raw-vs-governed/run.js",
     "test:examples": "node --test examples/raw-vs-governed/guard.test.js",
-    "verify:successor-evidence": "node scripts/verify-successor-evidence.js"
+    "verify:successor-evidence": "node scripts/verify-successor-evidence.js",
+    "test:regressions": "node --test api/evaluate.test.js examples/raw-vs-governed/guard.test.js"
   },
   "dependencies": {}
 }

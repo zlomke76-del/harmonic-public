@@ -1,3 +1,13 @@
+## 4.0.0-public.3 — CFAV public-reference corrective successor
+
+- Corrected the public evaluator so explicit revoked, expired, or scope-incompatible authority cannot coexist with an execution-admitting `stable / admissible / allow` top-level result.
+- Made declared freshness fail closed when the required verification time is missing, invalid, materially future-dated, or stale.
+- Added short-lived public-reference request and operation bindings to the evaluator response. These hashes are not production authentication.
+- Hardened the public `raw-vs-governed` teaching guard: current-state revalidation and deployment-supplied receipt verification are now mandatory before effect.
+- Added effect-time revalidation so a material change after the first evaluation forces a new evaluation before execution. The example still makes no atomicity claim.
+- Restored `V4_PUBLIC_BOUNDARY.md`, allowing the declared public-boundary verification command to run from a clean checkout.
+- Added regression coverage for the independently reported public-reference findings while preserving the sovereign-runtime claim boundary.
+
 ## 2026-10-06 — V121 / V122 preserved successor evidence
 
 - Added V121 / RED TEAM 005 — PASS, BOUNDED, independently accepted as run.
