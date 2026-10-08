@@ -46,16 +46,18 @@ guarded path evaluates current evidence before execution.
 ```js
 const { guardedExecute } = require('./examples/raw-vs-governed/guard');
 const result = await guardedExecute({
-  baseUrl, packet, execute: () => releaseDocument(proposal.arguments),
+  baseUrl,
+  packet,
+  refreshCurrentPacket: () => reacquireCurrentAuthorityAndEvidence(packet),
+  verifyReceipt: ({ packet, receipt }) => verifyAuthenticatedReceipt(packet, receipt),
+  execute: () => releaseDocument(proposal.arguments),
 });
 ```
 
 `packetFor` shows how the host supplies the proposed consequence, historical
 claim, current registry observation, revision, and accountable parties. It sends
 no desired verdict. The reference evaluator produces the receipt; the adapter
-owns the decision to invoke the executor. `guard.js` accepts only a matching
-public-reference `stable / admissible=true / allow` receipt and fails closed for
-errors, malformed responses, escalation, or constraints. A constrained receipt
+owns the decision to invoke the executor. `guard.js` accepts only a matching, current, execution-admitting receipt and fails closed for errors, malformed responses, escalation, constraints, failed/closed continuity, missing receipt verification, or missing current-state revalidation. The public reference also binds the submitted packet and represented operation with short-lived hashes; production authentication remains the integrator's responsibility. A constrained receipt
 requires a separate implementation of its actual constraints, not a silent allow.
 The wire terms are preserved: `blocked / deny` is not rewritten as a production
 `REFUSED` receipt or a fabricated `BLOCK` field.
@@ -73,14 +75,7 @@ the gap a downstream executor can create. It stores fictional identifiers only;
 no document, payment, or email leaves the machine. The unchanged-authority
 control is an independent trial, not authority restored after revocation.
 
-The adapter is an integration teaching example, not a production authorization
-SDK. Packet ID matching is not cryptographic receipt verification. Production
-integration must bind authenticated current authority evidence and the exact
-immutable action to a verified receipt, enforce freshness and single-use
-execution, and handle authoritative change between evaluation and consequence
-at the actual execution boundary. This demo supplies the registry change before
-evaluation; it does not solve every possible later race or discover unreported
-changes. Every effect-capable path must pass the boundary for enforcement to hold.
+The adapter is an integration teaching example, not a production authorization SDK. It now requires an integration-owned current-state revalidation callback and a receipt-verification callback before effect. The included public-reference binding helper validates request/operation hashes and expiry but is not a cryptographic signature verifier. Production integration must bind authenticated current authority evidence and the exact immutable action to a verified receipt, enforce freshness and single-use execution, and handle authoritative change between evaluation and consequence at the actual execution boundary. This reduces and exposes the later race; it does not claim atomicity or discover unreported changes. Every effect-capable path must pass the boundary for enforcement to hold.
 
 ## Verify
 

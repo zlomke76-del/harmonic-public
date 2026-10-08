@@ -2,7 +2,7 @@ const http = require('node:http');
 const assert = require('node:assert/strict');
 const { randomUUID } = require('node:crypto');
 const evaluate = require('../../api/evaluate');
-const { guardedExecute } = require('./guard');
+const { guardedExecute, verifyReferenceReceiptBinding } = require('./guard');
 
 async function propose() {
   const tool = { name: 'release_document', arguments: { document_id: 'design-001', recipient_id: 'supplier-001' } };
@@ -28,9 +28,9 @@ async function propose() {
   return proposal;
 }
 
-function packetFor(proposal, authority) {
+function packetFor(proposal, authority, packetId = randomUUID()) {
   return {
-    packet_id: randomUUID(), requested_action: proposal.name,
+    packet_id: packetId, requested_action: proposal.name,
     execution_request: { action: proposal.name, arguments: proposal.arguments },
     truth: {
       claims: ['At T0 the NDA was valid and document release was authorized.'],
@@ -85,7 +85,14 @@ async function run() {
     assert.equal(raw.justified, false);
     console.log('RAW: HTTP release executed; unjustified disclosure recorded.');
     const before = ledger.length;
-    const governed = await guardedExecute({ baseUrl, packet: packetFor(proposal, authority), execute });
+    const governedPacket = packetFor(proposal, authority);
+    const governed = await guardedExecute({
+      baseUrl,
+      packet: governedPacket,
+      refreshCurrentPacket: async (current) => packetFor(proposal, authority, current.packet_id),
+      verifyReceipt: async ({ packet, receipt }) => verifyReferenceReceiptBinding({ packet, receipt }),
+      execute,
+    });
     assert.equal(governed.executed, false);
     assert.equal(governed.receipt?.outcome, 'blocked');
     assert.equal(ledger.length, before);
@@ -93,7 +100,14 @@ async function run() {
     console.log(JSON.stringify(governed.receipt, null, 2));
     // Independent unchanged-authority control, not reinstatement after revocation.
     authority = { active: true, revision: 1 };
-    const control = await guardedExecute({ baseUrl, packet: packetFor(proposal, authority), execute });
+    const controlPacket = packetFor(proposal, authority);
+    const control = await guardedExecute({
+      baseUrl,
+      packet: controlPacket,
+      refreshCurrentPacket: async (current) => packetFor(proposal, authority, current.packet_id),
+      verifyReceipt: async ({ packet, receipt }) => verifyReferenceReceiptBinding({ packet, receipt }),
+      execute,
+    });
     assert.equal(control.executed, true);
     assert.equal(ledger.length, before + 1);
     assert.equal(ledger.at(-1).justified, true);
