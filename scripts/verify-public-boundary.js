@@ -16,7 +16,7 @@ const docs = read('docs.html');
 const publicDocs = read('public/docs.html');
 const pkg = JSON.parse(read('package.json'));
 
-assert(pkg.version === '4.0.0-public.1', 'package version must identify the V4 public contract release');
+assert(pkg.version === '4.0.0-public.3', 'package version must identify the V4 public contract release');
 assert(readme.includes('does not contain the sovereign production Harmonic runtime'), 'README must preserve the public/private runtime boundary');
 assert(readme.includes('D3 — provenance dependency not demonstrated'), 'README must preserve the T4 non-result');
 assert(boundary.includes('Evidence is not runtime configuration'), 'boundary document must prevent evidence/runtime conflation');
