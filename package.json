@@ -1,6 +1,6 @@
 {
   "name": "harmonic-stabilizer-core",
-  "version": "4.0.0-public.3",
+  "version": "4.0.0-public.4",
   "private": false,
   "description": "Public Harmonic v4 architecture contract, public-safe reference evaluator, SDK examples, and frozen evidence archive. Sovereign production runtime implementation excluded.",
   "scripts": {

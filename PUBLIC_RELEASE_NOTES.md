@@ -1,3 +1,13 @@
+## 4.0.0-public.4 — CFAV similitude successor reconciliation
+
+- Corrected public-reference representation shadowing reported against `ac8fb2fb7d148580528b0d4335bb5c5d15debd61`.
+- Empty `truth.observations` no longer suppresses contradictory represented observation signals in `observed_state` / `observed_reality`.
+- A populated `authority` object no longer suppresses represented revocation facts in the compatibility `accountability` lane.
+- Generic future expiry no longer masks an already-expired mandate or delegation expiry; represented expiry facts are reconciled fail-closed in the public reference.
+- Added bounded regressions for the three mechanisms plus a non-conflicting duplicate-representation positive control.
+- HSG-04 remains an identity/attribution contract question, not a proven authorization defect. HSG-05 remains the already-disclosed receiver-finality/atomicity boundary.
+- No sovereign production Harmonic runtime source or behavior is modified by this public-reference successor.
+
 ## 4.0.0-public.3 — CFAV public-reference corrective successor
 
 - Corrected the public evaluator so explicit revoked, expired, or scope-incompatible authority cannot coexist with an execution-admitting `stable / admissible / allow` top-level result.

@@ -100,6 +100,14 @@ npm run example:raw-vs-governed
 See [the example and optional live model mode](./examples/raw-vs-governed/README.md).
 This is a synthetic public-reference integration demo, separate from frozen evidence.
 
+## Public-reference successor remediation
+
+The public-safe reference evaluator has a preserved corrective lineage. See
+[CFAV public-reference remediation](CFAV_REMEDIATION_2026-10-08.md) and the
+[CFAV similitude successor remediation](CFAV_SIMILITUDE_REMEDIATION_2026-10-09.md).
+These records apply only to the public reference implementation; they do not rewrite
+frozen predecessor evidence or claim changes to the sovereign production Harmonic runtime.
+
 ## Public runtime and evidence boundary
 
 This repository does not contain the sovereign production Harmonic runtime.

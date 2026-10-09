@@ -24,10 +24,15 @@ non-contradiction invariants when the corresponding facts are represented:
 - expired authority cannot return an execution-admitting top-level result;
 - explicit authority/request scope mismatch cannot return an execution-admitting top-level result;
 - when a freshness window is declared, missing, invalid, materially future-dated, or stale verification time is fail-closed.
+- alternate represented observation lanes are considered together for contradiction detection; an empty preferred lane does not erase a contradictory represented signal;
+- represented revocation and expiry facts are fail-closed across the public `authority` / compatibility `accountability` inputs; one populated representation does not silently suppress a contradictory revocation or expiry;
+- multiple represented expiry fields are not treated as first-truthy precedence. Any represented expired authority/mandate/delegation expiry closes the public-reference authority basis unless a future typed contract explicitly constitutes a different rule.
 
 The reference evaluator does not independently establish the truth, competence, or
 authenticity of caller-supplied authority/evidence. Those remain integration and
-institutional responsibilities.
+institutional responsibilities. These public-reference reconciliation rules are conservative
+non-contradiction rules for represented facts; they are not claims about the sovereign
+production Harmonic runtime or a universal institutional precedence model.
 
 ## Execution example
 

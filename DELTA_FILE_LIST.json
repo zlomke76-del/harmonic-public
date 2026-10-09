@@ -1,0 +1,17 @@
+{
+  "base": "harmonic-public-main (8).zip / ac8fb2fb7d148580528b0d4335bb5c5d15debd61",
+  "successor": "4.0.0-public.4",
+  "changed": [
+    "README.md",
+    "PUBLIC_RELEASE_NOTES.md",
+    "package.json",
+    "V4_PUBLIC_BOUNDARY.md",
+    "api/evaluate.js",
+    "api/evaluate.test.js",
+    "scripts/verify-public-boundary.js"
+  ],
+  "added": [
+    "CFAV_SIMILITUDE_REMEDIATION_2026-10-09.md"
+  ],
+  "removed": []
+}
