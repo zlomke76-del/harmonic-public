@@ -58,11 +58,19 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
 }
 
-function collectStatements(packet, path) {
-  return normalizeArray(path(packet)).map((item) => {
+function statementsFrom(value) {
+  return normalizeArray(value).map((item) => {
     if (typeof item === "string") return item;
     return item?.statement || item?.claim || item?.description || item?.message || "";
   }).filter(Boolean);
+}
+
+function collectStatements(packet, path) {
+  return statementsFrom(path(packet));
+}
+
+function collectStatementLanes(...lanes) {
+  return lanes.flatMap((lane) => statementsFrom(lane));
 }
 
 function getFreshness(packet) {
@@ -93,7 +101,11 @@ function getFreshness(packet) {
 
 function detectContradiction(packet) {
   const declared = collectStatements(packet, (p) => p?.truth?.claims || p?.declared_state?.claims || p?.declared_state?.current_state_claims);
-  const observed = collectStatements(packet, (p) => p?.truth?.observations || p?.observed_state?.signals || p?.observed_reality?.signals);
+  const observed = collectStatementLanes(
+    packet?.truth?.observations,
+    packet?.observed_state?.signals,
+    packet?.observed_reality?.signals,
+  );
   const declaredText = declared.join(" ").toLowerCase();
   const observedText = observed.join(" ").toLowerCase();
   if (!declaredText || !observedText) return false;
@@ -108,7 +120,11 @@ function evaluateStability(packet) {
   let score = 100;
 
   const claims = collectStatements(packet, (p) => p?.truth?.claims || p?.declared_state?.claims || p?.declared_state?.current_state_claims);
-  const observations = collectStatements(packet, (p) => p?.truth?.observations || p?.observed_state?.signals || p?.observed_reality?.signals);
+  const observations = collectStatementLanes(
+    packet?.truth?.observations,
+    packet?.observed_state?.signals,
+    packet?.observed_reality?.signals,
+  );
   const evidence = normalizeArray(packet?.truth?.evidence || packet?.evidence);
   const unresolvedContradictions = normalizeArray(packet?.truth?.unresolved_contradictions || packet?.unresolved_contradictions);
   const freshness = getFreshness(packet);
@@ -237,19 +253,37 @@ function severityWeight(severity) {
 }
 
 function detectAuthorityRisk(packet) {
-  const authority = packet?.authority || packet?.accountability || {};
-  const revoked = Boolean(authority.revoked || authority.revocation_detected || authority.delegation_revoked);
-  const expiresAt = authority.expires_at || authority.mandate_expires_at || authority.delegation_expires_at;
-  const scope = authority.scope || authority.delegation_scope || authority.mandate_scope;
+  const sources = [packet?.authority, packet?.accountability].filter((value) => value && typeof value === "object");
   const requestedScope = packet?.execution_request?.scope || packet?.requested_scope || packet?.system_context?.workflow;
-  const expired = expiresAt ? new Date(expiresAt).getTime() < Date.now() : false;
-  const scopeMismatch = Boolean(scope && requestedScope && String(scope).toLowerCase() !== String(requestedScope).toLowerCase());
+
+  const revoked = sources.some((source) => Boolean(
+    source.revoked || source.revocation_detected || source.delegation_revoked
+  ));
+
+  const expirations = sources.flatMap((source) => [
+    source.expires_at,
+    source.mandate_expires_at,
+    source.delegation_expires_at,
+  ]).filter(Boolean);
+  const expirationTimes = expirations.map((value) => new Date(value).getTime()).filter(Number.isFinite);
+  const expired = expirationTimes.some((value) => value < Date.now());
+
+  const scopes = sources.flatMap((source) => [
+    source.scope,
+    source.delegation_scope,
+    source.mandate_scope,
+  ]).filter(Boolean);
+  const scopeMismatch = Boolean(
+    requestedScope && scopes.some((scope) => String(scope).toLowerCase() !== String(requestedScope).toLowerCase())
+  );
 
   return {
     revoked,
     expired,
     scope_mismatch: scopeMismatch,
-    has_expiry: Boolean(expiresAt),
+    has_expiry: expirations.length > 0,
+    represented_expirations: expirations.length,
+    represented_scopes: scopes.length,
   };
 }
 

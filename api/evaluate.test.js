@@ -69,3 +69,43 @@ test('current in-scope authority can still return stable/allow', () => {
   assert.match(result.reference_binding.request_hash, /^[a-f0-9]{64}$/);
   assert.match(result.reference_binding.operation_hash, /^[a-f0-9]{64}$/);
 });
+
+
+test('empty preferred observation lane cannot shadow contradictory observed-state revocation signal', () => {
+  const packet = basePacket();
+  packet.truth.observations = [];
+  packet.observed_state = { signals: [{ statement: 'Authorization revoked before consequence.' }] };
+  const result = evaluateHarmonicStabilizer(packet);
+  assert.equal(result.outcome, 'blocked');
+  assert.equal(result.recommended_action, 'deny');
+});
+
+test('present authority object cannot shadow revocation represented in accountability', () => {
+  const packet = basePacket();
+  packet.accountability.revoked = true;
+  const result = evaluateHarmonicStabilizer(packet);
+  assert.equal(result.outcome, 'blocked');
+  assert.equal(result.recommended_action, 'deny');
+  assert.equal(result.runtime_continuity.authority_risk.revoked, true);
+});
+
+test('generic future expiry cannot shadow an expired mandate expiry', () => {
+  const packet = basePacket();
+  packet.authority.expires_at = '2090-01-01T00:00:00Z';
+  packet.authority.mandate_expires_at = '2001-01-01T00:00:00Z';
+  const result = evaluateHarmonicStabilizer(packet);
+  assert.equal(result.outcome, 'blocked');
+  assert.equal(result.recommended_action, 'deny');
+  assert.equal(result.runtime_continuity.authority_risk.expired, true);
+});
+
+test('non-conflicting duplicate authority representations preserve stable allow control', () => {
+  const packet = basePacket();
+  packet.accountability.revoked = false;
+  packet.accountability.expires_at = '2090-01-01T00:00:00Z';
+  packet.accountability.scope = 'nda-document-release';
+  const result = evaluateHarmonicStabilizer(packet);
+  assert.equal(result.outcome, 'stable');
+  assert.equal(result.admissible, true);
+  assert.equal(result.recommended_action, 'allow');
+});
