@@ -1,5 +1,13 @@
 # SCGA-BS-003 → BS-005 — Preserved Examination Lineage
 
+## External EU AI Act article mapping — Veil V21 (May 2026)
+
+**[Read the external reviewer’s EU AI Act article mapping (PDF)](docs/external-reviews/shucrani-veil-v21-eu-ai-act-article-mapping-2026-05-13.pdf)**
+
+Lamar B. Shucrani (Sprinkling Act, Brussels) prepared *Notes on Solace Veil V21 · Article Mapping (refined)*, dated **13 May 2026**, following External Reviewer access to Veil V21 on 12 May 2026. It relates observable runtime concepts to selected provisions of Regulation (EU) 2024/1689, including risk management, human oversight, recording, deployer monitoring, and multi-deployer coherence. The reviewer identifies cross-deployer runtime synchronization as an unresolved architectural edge.
+
+**Scope and status:** This is an external, non-contractual *article-mapping observation*, **not** a notified-body conformity assessment, EU AI Act certification, legal opinion, or proof of compliance. The reviewer explicitly did **not** assess the platform's administrative Audit Logs, System Configuration, or aggregate Overview. The document concerns **Veil V21**; it must not be read as an independent certification of Harmonic's production runtime or as a revision of the frozen examinations preserved below. The PDF retains the reviewer’s original text, attribution, and references.
+
 ## Status
 
 **Evidence record only. This directory does not modify Harmonic runtime behavior, primitive semantics, request contracts, or execution policy.**
